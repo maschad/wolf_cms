@@ -1,0 +1,66 @@
+'Country.Germany:Mosaic':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  childNodes:
+    column1:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay': true
+          'Country.Germany:OfferMessage': true
+          '*': false
+    column2:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay': true
+          'Country.Germany:OfferMessage': true
+          '*': false
+    column3:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay': true
+          'Country.Germany:OfferMessage': true
+          '*': false
+    column4:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay': true
+          'Country.Germany:OfferMessage': true
+          '*': false
+  ui:
+    label: 'Kachelreihe'
+    icon: icon-columns
+    group: 'Partials'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        mosaic:
+          label: Mosaik
+  properties:
+    layout:
+      type: string
+      defaultValue: '25-25-25-25'
+      ui:
+        reloadIfChanged: TRUE
+        inspector:
+          group: mosaic
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '25-25-25-25':
+                label: '25% / 25% / 25% / 25%'
+              '50-25-25':
+                label: '50% / 25% / 25%'
+              '25-25-50':
+                label: '25% / 25% / 50%'
+              '25-50-25':
+                label: '25% / 50% / 25%'
+              '33-33-33':
+                label: '33% / 33% / 33%'
+              '75-25':
+                label: '75% / 25%'
+              '25-75':
+                label: '25% / 75%'  

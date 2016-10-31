@@ -1,0 +1,28 @@
+prototype(Country.Germany:ColoredTabCarousel) {
+        carouselItems = TYPO3.Neos:ContentCollection {
+                nodePath = 'carouselItems'
+                content.iterationName = 'carouselItemsIteration'
+                attributes.class = 'carousel-inner' 
+        }
+
+        // Collect the carousels children but only images
+        carouselItemArray = ${q(node).children('carouselItems').children('[instanceof Country.Germany:ColoredItem]')}
+	
+        // Enhance image prototype when inside the carousel
+        prototype(Country.Germany:ColoredItem){
+
+                // Render images in the carousel with a special template.
+                templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/ColoredCarouselItem.html'
+		headline = ${q(node).property('headline')}
+                text = ${q(node).property('text')}
+                name = ${q(node).property('tabName')}
+
+                imageSize = ${q(node).property('imageSize')}
+
+                // The first item should later be marked as active
+                attributes.class = ${'item' + (carouselItemsIteration.isFirst ? ' active' : '')}
+
+                // We want to use the item iterator in fluid so we have to store it as variable.
+                iteration = ${carouselItemsIteration}
+        }
+}

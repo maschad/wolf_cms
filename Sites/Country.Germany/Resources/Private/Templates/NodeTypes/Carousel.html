@@ -1,0 +1,33 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+    <div class="content-body" id="detail-house">
+        <div class="carousel slide carousel-fade" id="{node.identifier}" data-ride="carousel" data-interval="false">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                    <f:for each="{carouselItemArray}" as="item" iteration="itemIterator">
+                            <li data-target="#{node.identifier}" data-slide-to="{itemIterator.index}" class="{f:if(condition: itemIterator.isFirst, then: 'active')}"></li>
+                    </f:for>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+             {carouselItems -> f:format.raw()}
+            </div>
+
+            <div class="carousel-caption {overlayColor}">
+                <div class="container">
+                    <p>{neos:contentElement.editable(property: 'heading', tag: 'span')}</p>
+                    <f:if condition="{carouselItemCount} > 1">
+                        <a class="left carousel-control" href="#{node.identifier}" role="button" data-slide="prev">
+                            <img src="{f:uri.resource(path:'Images/left.png',package:'Country.Germany')}" class="img-responsive">
+                        </a>
+                        <a class="right carousel-control" href="#{node.identifier}" role="button" data-slide="next">
+                             <img src="{f:uri.resource(path:'Images/right.png',package:'Country.Germany')}" class="img-responsive">
+                        </a>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

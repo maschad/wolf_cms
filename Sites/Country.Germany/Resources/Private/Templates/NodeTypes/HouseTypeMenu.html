@@ -1,0 +1,63 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<div id="sub-nav-wrapper">
+    <div class="container no-padding">
+            <ul class="nav navbar-nav sub-nav pull-right" id="sub-nav">
+                <li class="header-text">{title}</li>
+                <f:for each="{houseTypeItems}" as="houseTypeItem" iteration="houseTypeItemIterator">
+                	<li class="dropdown dropdown-large">
+            			<ts:render path="houseTypeItemRender" context="{node: houseTypeItem}"/>
+            		</li>
+
+
+            	</f:for>
+
+                <f:for each="{houseTypeItems2}" as="houseTypeItem" iteration="houseTypeItemIterator">
+                    <li class="dropdown dropdown-large">
+                        <ts:render path="houseTypeItem2Render" context="{node: houseTypeItem}"/>
+                    </li>
+
+
+                </f:for>
+                
+             </ul>
+    </div>
+</div>    
+
+<div class="panel-group responsive-panel visible-xs-block" id="accordionResponsive" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading collapsed" role="tab" id="headingOneResponsive" data-toggle="collapse" data-parent="#accordionResponsive" data-target="#collapseOneResponsive" aria-expanded="true" aria-controls="collapseOneResponsive">
+            <h4 class="panel-title main-title">{title} <span class="indicator glyphicon glyphicon-menu-down pull-right" aria-hidden="true"></span>
+            </h4>
+        </div>    
+
+        <div id="collapseOneResponsive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOneResponsive">
+            <div class="panel-body">
+                <ul class="nav navbar-nav sub-nav">
+                    <f:for each="{houseTypeItems}" as="houseTypeItem" iteration="houseTypeItemIterator">
+                        <li class="dropdown dropdown-large toggle-menu">
+                            <ts:render path="houseTypeItemRender2" context="{node: houseTypeItem}"/>
+                        </li>
+                    </f:for>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading collapsed" role="tab" id="headingTwoResponsive" data-toggle="collapse" data-parent="#accordionResponsive" href="#collapseTwoResponsive" aria-expanded="false" aria-controls="collapseTwoResponsive">
+            <h4 class="panel-title main-title">
+                Sonstige Informationen <span class="indicator glyphicon glyphicon-menu-down pull-right" aria-hidden="true"></span>
+            </h4>
+        </div>
+
+        <div id="collapseTwoResponsive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwoResponsive">
+            <div class="panel-body">
+                <ul class="nav navbar-nav main-nav">
+                    <ts:render path="mobileMainMenu" />
+                </ul>
+            </div>
+        </div>      
+    </div>
+</div>      
+                    

@@ -1,0 +1,177 @@
+'Country.Germany:MosaicGridItem':
+  superTypes:
+    'TYPO3.Neos:Content': true
+    
+  ui:
+    label: 'Referenzhäuser'
+    icon: icon-picture
+    inlineEditable: true
+    group: 'Partials'
+    inspector:
+      groups:
+        details:
+          label: 'Details'
+        display:
+          label: 'Display'
+          icon: icon-image
+  
+  properties:
+    thumbnailHeading:
+      type: string
+      defaultValue: 'Pangerl'
+      ui:
+        label: 'Thumbnail Heading'
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          group: details
+
+    thumbnailAlternativeText:
+      type: string
+      defaultValue: 'Pangerl'
+      ui:
+        label: 'Alternative Text'
+        reloadIfChanged: true
+        inlineEditable: false
+        inspector:
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          group: details
+
+    thumbnailSubHeading1:
+      type: string
+      defaultValue: 'Traunkirchen'
+      ui:
+        label: 'Thumbnail Sub Heading 1'
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          group: details
+
+    thumbnailSubHeading2:
+      type: string
+      defaultValue: '(Oberösterreich)'
+      ui:
+        label: 'Thumbnail Subheading 2 Default'
+        reloadIfChanged: true
+        inlineEditable: true
+        inspector:
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          group: details
+
+    heading:
+      type: string
+      defaultValue: 'Bungalow: Planum'
+      ui:
+        label: 'Heading'
+        reloadIfChanged: true
+        inlineEditable: true
+        aloha:
+          placeholder: 'Overlay Title'
+        inspector:
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          group: details
+
+    subheading:
+      type: string
+      defaultValue: 'Gundendorfer'
+      ui:
+        label: 'Sub Heading'
+        reloadIfChanged: true
+        inlineEditable: true
+        aloha:
+          placeholder: 'Gundendorfer'
+        inspector:
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          group: details
+    description:
+      type: string
+      defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ex augue, hendrerit sed gravida ut, mattis vel tortor. Duis hendrerit sagittis bibendum. Fusce massa risus, hendrerit et est vitae, convallis accumsan ipsum. Integer vitae erat mattis, ornare tortor nec, luctus turpis. '
+      ui:
+        label: 'Overlay Description'
+        reloadIfChanged: true
+        inlineEditable: true
+        aloha:
+          placeholder: 'Text'  
+        inspector:
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          group: details
+
+    linkContent:
+      type: string
+      defaultValue: 'Diese Hauslinien ansehen'
+      ui:
+        label: 'Link Content'
+        reloadIfChanged: true
+        inspector:
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          group: details
+
+    thumbnail:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Thumbnail Image'
+        reloadIfChanged: true
+        inspector:
+          group: display
+          editorOptions:
+            crop:
+              aspectRatio:
+                locked:
+                  width: 3
+                  height: 2
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Main Detail Image'
+        reloadIfChanged: true
+        inspector:
+          group: display
+    video:
+      type: string
+      ui:
+        label: 'Youtube Video'
+        reloadIfChanged: true
+        inspector:
+          group: display
+
+    overlayColor:
+      type: string
+      ui:
+        label: 'Overlay Color'
+        inlineEditable: false
+        inspector:
+          group: display
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              dunkelgrau:
+                label: Dunkelgrau
+              gelb:
+                label: Gelb
+              rot:
+                label: Rot
+              grun:
+                label: Grün
+              blau:
+                label: Blau
+              dunkelrot:
+                label: Dunkelrot
+    mosaicType:
+      type: string
+      defaultValue: 'image'
+      ui:
+        label: 'Grid Item Type'
+        inlineEditable: false
+        inspector:
+          group: display
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              image:
+                label: 'Single Image'
+              video:
+                label: 'Video'
+              gallery:
+                label: 'Gallery'

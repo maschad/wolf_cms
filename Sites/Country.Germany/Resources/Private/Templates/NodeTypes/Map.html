@@ -1,0 +1,21 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<map name="{name}" id="{name}">
+	<area alt="" class="maptiptool-left" data-tooltip-content="#{icon1Name}" shape="poly" coords="272,64,303,65,305,97,271,97" />
+	<area alt="" class="maptiptool-right" data-tooltip-content="#{icon2Name}" shape="poly" coords="622,54,655,54,656,87,623,86" />
+	<area alt="" class="maptiptool-bottom" data-tooltip-content="#{icon3Name}" shape="poly" coords="807,264,839,263,839,296,807,296" />
+	<area alt="" class="maptiptool-bottom" data-tooltip-content="#{icon4Name}" shape="poly" coords="525,321,558,322,559,354,527,354" />
+	<area alt="" class="maptiptool-left" data-tooltip-content="#{icon5Name}" shape="poly" coords="352,428,384,429,385,461,352,461" />
+	<area alt="" class="maptiptool-left" data-tooltip-content="#{icon6Name}" shape="poly" coords="272,273,304,274,305,305,272,305" />
+    <area alt="" class="maptiptool-top" data-tooltip-content="#{icon7Name}" shape="poly" coords="437,232,471,233,472,266,437,267" />
+</map>
+<div class="maptiptool_templates">
+	<ts:render path="iconTopLeft"/>
+	<ts:render path="iconTopRight"/>
+	<ts:render path="iconMidRight"/>
+	<ts:render path="iconMidCenterRight"/>
+	<ts:render path="iconBottom"/>
+	<ts:render path="iconMidLeft"/>
+	<ts:render path="iconMidCenterLeft"/>
+
+</div>

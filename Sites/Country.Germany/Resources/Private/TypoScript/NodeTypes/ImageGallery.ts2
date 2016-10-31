@@ -1,0 +1,30 @@
+prototype(Country.Germany:ImageGallery) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:ImageGallery) {
+        carouselItems = TYPO3.Neos:ContentCollection {
+                nodePath = 'carouselItems'
+		headline = ${q(node).property('headline')}
+                attributes.id='fotorama_gallery' 
+                attributes.class='fotorama' 
+                attributes.data-nav='thumbs'
+                attributes.data-arrows='false' 
+                attributes.data-swipe='false' 
+                attributes.data-auto='false' 
+                attributes.data-thumbwidth='90px'
+                attributes.data-thumbheight='70px' 
+                attributes.data-thumbborderwidth='0' 
+                attributes.data-thumbmargin='15'
+
+        }
+
+        // Collect the carousels children but only images
+        carouselItemArray = ${q(node).children('carouselItems').children('[instanceof TYPO3.Neos.NodeTypes:Image]')}
+	
+// Enhance image prototype when inside the carousel
+        prototype(TYPO3.Neos.NodeTypes:Image) {
+		 // Render images in the carousel with a special template.
+                templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/GalleryItem.html'
+
+		image = ${q(node).property('image')}
+	}
+
+}

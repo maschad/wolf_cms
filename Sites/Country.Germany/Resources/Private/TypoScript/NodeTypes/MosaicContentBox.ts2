@@ -1,0 +1,29 @@
+prototype(Country.Germany:MosaicContentBox) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:MosaicContentBox) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MosaicContentBox.html'
+
+	greyShadow = ${q(node).property('greyShadow')}
+	arrows = ${q(node).property('arrows')}
+
+
+	mosaicImages = ${q(node).children('mosaicSets').children().children().children().children().children('[instanceof Country.Germany:ImageHoverOverlay]')}
+
+	mosaicRender = Country.Germany:ImageHoverOverlay
+	mosaicRender {
+		templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/ImageHoverOverlaySmall.html'
+	}
+	
+  
+ 
+	
+	mosaicSets = TYPO3.Neos:ContentCollection
+	mosaicSets {
+		nodePath = 'mosaicSets'
+		attributes.class = 'owl-carousel hidden-xs hidden-sm'
+		attributes.id = 'owl-carousel-large'
+
+		
+	}
+
+	
+}

@@ -1,0 +1,28 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+
+<div {attributes -> f:format.raw()}>
+	<section class="system section hidden-xs" id="article">
+	    <div class="container">
+	        <div class="row">           
+	            <div class="col-sm-7 col-md-6">
+		            <p class="system page-title">{neos:contentElement.editable(property: 'headline', tag: 'span')}</p>
+		            {neos:contentElement.editable(property: 'text', tag: 'p')}
+		            <div class="row">
+		        		<div class="col-sm-8 col-md-6">
+		        		<f:if condition="{buttonText}">
+               				 <f:then>
+	        					<a href="{link}" class="btn btn-custom" role="button">{neos:contentElement.editable(property: 'buttonText', tag: 'span')}</a>
+        					</f:then>
+    					</f:if>
+		    			</div>
+					</div>
+		            {neos:contentElement.editable(property: 'secondaryText', tag: 'p')}
+				</div>
+		      	<div class="col-sm-5 col-md-6">
+      				<img class="img-responsive center-block img-border-right {borderColor}" <f:if condition="{image}"> src="{f:uri.resource(resource: image.resource)}" </f:if>>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,50 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<f:section name="Image">
+    <f:if condition="{image}">
+        <f:then>
+            <f:if condition="{fitType} == 'fitSmall'">
+                <f:then>
+                    <img src="{f:uri.resource(resource: image.resource)}" alt="image" class="img-responsive" />
+                </f:then>   
+            </f:if>
+
+            <f:if condition="{fitType} == 'fitLarge'">
+                <f:then>
+                    <img src="{f:uri.resource(resource: image.resource)}" alt="image" class="img-fit-large" />
+                </f:then>   
+            </f:if> 
+        </f:then>
+    </f:if>
+</f:section>
+<f:if condition="{link}">
+    <f:then>
+        <div class="offer-overlay-content">
+            <a href="{link}">
+                <f:render section="Image" arguments="{image:node.properties.image, alt:node.properties.title, fitType:node.properties.fitType}" /> 
+                <div class="offer-overlay {overlayColor}">
+                    <p class="offer-heading">{title}</p>
+                    <p>{description}</p>
+                    <f:if condition="{linkText}">
+                        <f:then>
+                            <p class="offer-link">{linkText}</p>
+                        </f:then>
+                    </f:if>
+                </div>
+            </a>
+        </div> 
+    </f:then>  
+    <f:else>
+        <div class="offer-overlay-content">
+            <f:render section="Image" arguments="{image:node.properties.image, alt:node.properties.title, fitType:node.properties.fitType}" /> 
+            <div class="offer-overlay {overlayColor}">
+                <p class="offer-heading">{title}</p>
+                <p>{description}</p>
+                <f:if condition="{linkText}">
+                    <f:then>
+                        <p class="offer-link">{linkText}</p>
+                    </f:then>
+                </f:if>
+            </div>
+        </div> 
+    </f:else> 
+</f:if>         

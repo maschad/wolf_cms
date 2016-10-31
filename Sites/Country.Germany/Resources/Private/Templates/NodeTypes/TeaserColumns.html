@@ -1,0 +1,71 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<f:if condition="{arrows}">
+    <div id="teaser-before"></div>
+    <div class="container">
+            <a href="#teaser-before" class="arrow-up-link"></a>
+    </div>
+</f:if>
+
+<section class="section" id="teaser">
+    <div class="{f:if(condition: arrows, then: 'teaser-content', else: '')}">
+        <div class="container">
+            <f:if condition="{teaserCount} == 4">
+			     <div class="row hidden-xs">
+				        <div class="col-sm-6 col-md-3"><ts:render path="teaser1"/></div>
+				        <div class="col-sm-6 col-md-3"><ts:render path="teaser2"/></div>
+				        <div class="col-sm-6 col-md-3"><ts:render path="teaser3"/></div>
+				        <div class="col-sm-6 col-md-3"><ts:render path="teaser4"/></div>
+			     </div>
+            </f:if>
+            <f:if condition="{teaserCount} == 3">
+                 <div class="row hidden-xs">
+                        <div class="col-sm-0 col-md-2"></div>
+                        <div class="col-sm-6 col-md-3"><ts:render path="teaser1"/></div>
+                        <div class="col-sm-6 col-md-3"><ts:render path="teaser2"/></div>
+                        <div class="col-sm-6 col-md-3"><ts:render path="teaser3"/></div>
+                        <div class="col-sm-0 col-md-1"></div>
+                 </div>
+            </f:if>
+
+            <f:if condition="{teaserCount} == 2">
+                 <div class="row hidden-xs">
+                        <div class="col-sm-0 col-md-3"></div>
+                        <div class="col-sm-6 col-md-3"><ts:render path="teaser1"/></div>
+                        <div class="col-sm-6 col-md-3"><ts:render path="teaser2"/></div>
+                        <div class="col-sm-0 col-md-3"></div>
+                        
+                 </div>
+            </f:if>
+
+             <f:if condition="{teaserCount} == 1">
+                 <div class="row hidden-xs">
+                        <div class="col-sm-0 col-md-5"></div>
+                        <div class="col-sm-6 col-md-3"><ts:render path="teaser1"/></div>
+                        <div class="col-sm-0 col-md-4"></div>
+                        
+                 </div>
+            </f:if>
+
+			<div class="owl-carousel owl-carousel-small visible-xs-block">
+				
+            	<div class="item">
+            		<ts:render path="teaser1"/>
+            	</div>
+            	<div class="item">
+            		<ts:render path="teaser2"/>
+            	</div>	
+            	<div class="item">
+            		<ts:render path="teaser3"/>
+            	</div>
+            	<div class="item">
+            		<ts:render path="teaser4"/>
+            	</div>
+
+            	
+
+            </div>
+		</div>
+	</div>
+</section>				
+				

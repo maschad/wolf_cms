@@ -1,0 +1,61 @@
+{namespace form=TYPO3\Form\ViewHelpers}
+<a href="#contactForm" class="contact-link hidden-xs" data-toggle="modal">
+   <!--<img src="{f:uri.resource(path:'Images/mail_contact.png', package:'Country.Germany')}" class="img-responsive center-block hidden-xs hidden-sm">-->
+   <p>Kontakt &amp; <br>Katalog</p>
+</a>
+<div class="modal fade" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="contactFormLabel">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title" id="contactFormLabel">Nehmen Sie mit uns Kontakt auf!</h3>
+         </div>
+         <div class="modal-body">
+            <div class="row">
+               <div class="col-md-6">
+                  <ul class="contact-home">
+                     <li>Wolf Systembau Gesellschaft m.b.H., <br>
+                        Fischerbühel 1, <br>
+                        4644 Scharnstein
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-6">
+                  <ul class="contact">
+                     <li>+4376153000</li>
+                     <li>Schreiben Sie uns eine E-Mail</li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="divider"></div>
+            <form:form object="{form}" action="{f:uri.resource(path:'Form/sendDatatoCRM.php', package:'Country.Germany')}" method="post" id="{form.identifier}"
+           enctype="multipart/form-data">
+               <f:form.validationResults>
+                  <f:if condition="{validationResults.flattenedErrors}">
+                     <ul class="error">
+                        <f:for each="{validationResults.flattenedErrors}" as="elementErrors"
+                   key="elementIdentifier" reverse="true">
+                           <li>
+                              {elementIdentifier}:
+                              <ul>
+                                 <f:for each="{elementErrors}" as="error">
+                                    <li>{error}</li>
+                                 </f:for>
+                              </ul>
+                           </li>
+                        </f:for>
+                     </ul>
+                  </f:if>
+               </f:form.validationResults>
+               <form:renderRenderable renderable="{form.currentPage}" />
+               <div class="row">
+                  <div class="col-md-6">
+                     <button type="submit" class="btn btn-custom">Absenden</button>
+                  </div>
+               </div>
+            </form:form>
+         </div>
+      </div>
+   </div>
+</div>

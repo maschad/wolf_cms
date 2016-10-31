@@ -1,0 +1,11 @@
+prototype(Country.Germany:SystemLeftBox) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/SystemLeftBox.html'
+
+    image = ${q(node).property('image')}
+    link = ${q(node).property('link')}
+    linkText = ${q(node).property('linkText')}
+    borderColor = ${q(node).property('borderColor')}
+
+
+
+}

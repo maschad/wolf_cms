@@ -1,0 +1,10 @@
+<f:layout name="TYPO3.Form:Field" />
+
+<f:section name="field">
+	<label for="{element.uniqueIdentifier}">{element.label -> f:format.nl2br()}
+    	<f:if condition="{element.required}">
+        	<f:render partial="TYPO3.Form:Field/Required" />
+    	</f:if>
+	</label>
+	<f:form.textarea property="{element.identifier}" id="{element.uniqueIdentifier}" class="{element.properties.elementClassAttribute} form-control" additionalAttributes="{placeholder: element.properties.placeholder}" rows="{element.properties.rows}" cols="{element.properties.cols}" errorClass="{element.properties.elementErrorClassAttribute}" />
+</f:section>

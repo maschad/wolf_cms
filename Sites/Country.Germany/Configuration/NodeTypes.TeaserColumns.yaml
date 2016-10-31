@@ -1,0 +1,71 @@
+'Country.Germany:TeaserColumns':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  childNodes:
+    teaser1:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:Teaser': true
+          '*': false
+    teaser2:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:Teaser': true
+          '*': false
+    teaser3:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:Teaser': true
+          '*': false
+    teaser4:
+      type: 'TYPO3.Neos:ContentCollection'     
+      constraints:
+        nodeTypes:
+          'Country.Germany:Teaser': true
+          '*': false 
+  ui:
+    label: Teaser Spalte
+    icon: icon-columns
+    group: grid
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        teaserColumn:
+          label: Teaser Spalte
+  properties:
+    arrows:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: 'Include Arrows'
+        inspector:
+            group: 'teaserColumn'
+    layout:
+      type: string
+      defaultValue: '25-25-25-25'
+      ui:
+        reloadIfChanged: TRUE
+        inspector:
+          group: teaserColumn
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '25-25-25-25':
+                label: '25% / 25% / 25% / 25%'
+              '50-25-25':
+                label: '50% / 25% / 25%'
+              '25-25-50':
+                label: '25% / 25% / 50%'
+              '25-50-25':
+                label: '25% / 50% / 25%'
+              '33-33-33':
+                label: '33% / 33% / 33%'
+              '75-25':
+                label: '75% / 25%'
+              '25-75':
+                label: '25% / 75%' 
+    
+

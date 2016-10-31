@@ -1,0 +1,19 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+
+<div{attributes -> f:format.raw()}>
+    <f:if condition="{image}">
+        <a href="{link}">
+           <f:if condition="{fitType} == 'fitSmall'">
+                    <f:then>
+                            <img src="{f:uri.resource(resource: image.resource)}" alt="{imageAlt}" class="img-responsive">
+                    </f:then>       
+            </f:if>
+            <f:if condition="{fitType} == 'fitLarge'">
+                    <f:then>
+                            <img src="{f:uri.resource(resource: image.resource)}" alt="image" class="img-fit-large" />
+                    </f:then>       
+            </f:if>
+        </a>
+    </f:if>
+</div>

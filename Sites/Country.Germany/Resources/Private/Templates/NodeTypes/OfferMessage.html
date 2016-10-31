@@ -1,0 +1,12 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+
+<div class="offer-message {backgroundColor}">
+    <neos:contentElement.editable class="offer-message-heading" property="title" tag="p" />
+    <neos:contentElement.editable property="description" tag="p" />
+	<f:if condition="{link}">
+		<f:then>
+			<p class="offer-link"><a href="{link}">{linkText}</a></p>
+		</f:then>
+	</f:if>
+</div>

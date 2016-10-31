@@ -1,0 +1,34 @@
+prototype(Country.Germany:TeaserColumns) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/TeaserColumns.html'
+
+    arrows = ${q(node).property('arrows')}
+
+    teasers = ${q(node).children().children('[instanceof Country.Germany:Teaser]')}
+    teaserCount = ${q(node).children().children('[instanceof Country.Germany:Teaser]').count()}
+    
+
+    node=${node}
+
+    teaser1 = TYPO3.Neos:ContentCollection {
+       nodePath= 'teaser1'
+    }
+
+    teaser2 = TYPO3.Neos:ContentCollection {
+       nodePath= 'teaser2'
+    }
+
+    teaser3 = TYPO3.Neos:ContentCollection {
+       nodePath= 'teaser3'
+    }
+
+    teaser4 = TYPO3.Neos:ContentCollection {
+       nodePath= 'teaser4'
+    }
+
+    teaserRender = Country.Germany:Teaser {
+      templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/Teaser.html'
+    }
+
+    
+}
+

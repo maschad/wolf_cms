@@ -1,0 +1,243 @@
+type: 'TYPO3.Form:Form'
+identifier: contact-request-form
+label: Contact
+renderingOptions:
+  submitButtonLabel: Send
+renderables:
+  -
+    type: 'TYPO3.Form:Page'
+    identifier: page-one
+    label: Contact
+    renderables:
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-one
+        renderables:
+          -
+            type: 'TYPO3.Form:SingleLineText'
+            identifier: salutation
+            label: Anrede
+            validators:
+              - identifier: 'TYPO3.Flow:NotEmpty'
+            properties:
+              columnWidth: 12
+            defaultValue: ''
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-two
+        renderables:
+          -
+            type: 'TYPO3.Form:SingleLineText'
+            identifier: first-name
+            label: Vorname
+            validators:
+              - identifier: 'TYPO3.Flow:NotEmpty'
+            properties:
+              columnWidth: 6
+            defaultValue: ''
+          -
+            type: 'TYPO3.Form:SingleLineText'
+            identifier: last-name
+            label: Nachname
+            validators:
+              - identifier: 'TYPO3.Flow:NotEmpty'
+            properties:
+              columnWidth: 6
+            defaultValue: ''
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-three
+        renderables:
+          -
+            type: 'TYPO3.Form:SingleLineText'
+            identifier: road
+            label: Straße
+            validators:
+              - identifier: 'TYPO3.Flow:NotEmpty'
+            properties:
+              columnWidth: 6
+            defaultValue: ''
+          -
+            type: 'TYPO3.Form:SingleLineText'
+            identifier: zip-code
+            label: PLZ
+            validators:
+              - identifier: 'TYPO3.Flow:NotEmpty'
+            properties:
+              columnWidth: 2
+            defaultValue: ''
+          -
+            type: 'TYPO3.Form:SingleLineText'
+            identifier: place
+            label: Ort
+            validators:
+              - identifier: 'TYPO3.Flow:NotEmpty'
+            properties:
+              columnWidth: 4
+            defaultValue: ''
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-four
+        renderables:
+          -
+            type: 'TYPO3.Form:SingleSelectDropdown'
+            identifier: 'country'
+            label: 'Land'
+            properties:
+              columnWidth: 6
+              options:
+                'Austria': 'Austria'
+                '2': '2'
+                '3': '3'
+                '4': '4'
+                '5': '5'
+          -
+            type: 'TYPO3.Form:SingleLineText'
+            identifier: phone
+            label: Telefon
+            validators:
+              - identifier: 'TYPO3.Flow:NotEmpty'
+            properties:
+              columnWidth: 6
+            defaultValue: ''
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-five
+        renderables:
+          -
+            type: 'TYPO3.Form:SingleLineText'
+            identifier: fax
+            label: Fax
+            validators:
+              - identifier: 'TYPO3.Flow:NotEmpty'
+            properties:
+              columnWidth: 6
+            defaultValue: ''
+          -
+            type: 'TYPO3.Form:SingleLineText'
+            identifier: email
+            label: E-Mail
+            validators:
+              - identifier: 'TYPO3.Flow:NotEmpty'
+              - identifier: 'TYPO3.Flow:EmailAddress'
+            properties:
+              columnWidth: 6
+            defaultValue: ''
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-six
+        renderables:
+          -
+            type: 'TYPO3.Form:MultiLineText'
+            identifier: interest
+            label: 'Ich interessiere mich für:'
+            validators:
+              - identifier: 'TYPO3.Flow:NotEmpty'
+            properties:
+              columnWidth: 12
+            defaultValue: ''
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-seven
+        renderables:
+          -
+            type: 'TYPO3.Form:Checkbox'
+            identifier: make-appointment
+            label: Bitte vereinbaren Sie einen Beratungstermin mit mir.
+            properties:
+              columnWidth: 12
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-eight
+        renderables:
+          -
+            type: 'TYPO3.Form:SingleSelectDropdown'
+            identifier: 'hear'
+            label: 'Wie haben Sie von unserer Website erfahren?'
+            properties:
+              columnWidth: 6
+              options:
+                'Please select...': 'Please select...'
+                '2': '2'
+                '3': '3'
+                '4': '4'
+                '5': '5'
+          -
+            type: 'TYPO3.Form:SingleSelectDropdown'
+            identifier: 'available'
+            label: 'Ist ein Grundstück vorhanden?'
+            properties:
+              columnWidth: 6
+              options:
+                'Please select...': 'Please select...'
+                '2': '2'
+                '3': '3'
+                '4': '4'
+                '5': '5'
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-nine
+        renderables:
+          -
+            type: 'TYPO3.Form:SingleSelectDropdown'
+            identifier: 'build'
+            label: 'Wann wollen Sie bauen?'
+            properties:
+              columnWidth: 6
+              options:
+                'Please select...': 'Please select...'
+                '2': '2'
+                '3': '3'
+                '4': '4'
+                '5': '5'
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-ten
+        renderables:
+          -
+            type: 'TYPO3.Form:Checkbox'
+            identifier: send-me-info
+            label: Ja, schicken Sie mir Informationen über WOLF Haus.
+            properties:
+              columnWidth: 12
+          -
+            type: 'TYPO3.Form:Checkbox'
+            identifier: notify
+            label: Ja, ich möchte über Neues per Email informiert werden.
+            properties:
+              columnWidth: 12
+          -
+            type: 'TYPO3.Form:Checkbox'
+            identifier: copy
+            label: Bitte senden Sie mir eine Kopie dieser Anfrage.
+            properties:
+              columnWidth: 12
+      -
+        type: 'TYPO3.Form:Section'
+        identifier: section-eleven
+        renderables:
+          -
+            type: 'TYPO3.Form:Checkbox'
+            identifier: consent
+            label: 'Zustimmungserklärung: Der Internet-Nutzer ist damit einverstanden, dass die im Rahmen einer Internet-Nutzung erhobenen Daten zum Zwecke der Kommunikation zwischen ihm und der Wolf Systembau Gesellschaft m.b.H. verwendet und gespeichert werden dürfen. Diese Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden. *'
+            properties:
+              columnWidth: 12
+              elementClassAttribute: agreement
+finishers:
+  -
+    identifier: 'TYPO3.Form:Email'
+    options:
+      templatePathAndFilename: resource://Country.Germany/Private/Templates/Email/Contact.txt
+      subject: Contact from example.net
+      recipientAddress: office@example.net
+      recipientName: 'Office of Company'
+      senderAddress: server@example.net
+      senderName: Server example.net
+      replyToAddress: office@example.net
+      format: plaintext
+  -
+    identifier: 'TYPO3.Form:Confirmation'
+    options:
+      message: >
+        <h3>Thank you for your feedback</h3>
+        <p>We will process it as soon as possible.</p>

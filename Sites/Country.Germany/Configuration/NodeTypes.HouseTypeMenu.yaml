@@ -1,0 +1,29 @@
+'Country.Germany:HouseTypeMenu':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  childNodes:
+    houseTypes:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:HouseTypeMenuItem': true
+          'Country.Germany:HouseTypeMenuItem2': true
+          '*': false
+  ui:
+    label: Produkt-Dropdown
+    group: Menu
+    icon: icon-list
+    inspector:
+      groups:
+        houseTypeMenu:
+          label: Produkt-Dropdown
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Titel'
+        aloha:
+          placeholder: 'Titel'
+        inspector:
+          group: houseTypeMenu
+

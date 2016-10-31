@@ -1,0 +1,33 @@
+prototype(Country.Germany:HouseTypeMenuItem) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:HouseTypeMenuItem) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/HouseTypeMenuItem.html'
+
+	
+    
+    title = ${q(node).property('title')}
+    image = ${q(node).property('image')}
+    description1 = ${q(node).property('description1')}
+    description2 = ${q(node).property('description2')}
+    description3 = ${q(node).property('description3')}
+    buttonText = ${q(node).property('buttonText')}
+
+    link2Text = ${q(node).property('link2Text')}
+    link3Text = ${q(node).property('link3Text')}
+    link4Text = ${q(node).property('link4Text')}
+    link5Text = ${q(node).property('link5Text')}
+    link6Text = ${q(node).property('link6Text')}
+    link7Text = ${q(node).property('link7Text')}
+
+
+    link = ${q(node).property('link')}
+    link2 = ${q(node).property('link2')}
+    link3 = ${q(node).property('link3')}
+    link4 = ${q(node).property('link4')}
+    link5 = ${q(node).property('link5')}
+    link6 = ${q(node).property('link6')}
+    link7 = ${q(node).property('link7')}
+
+
+
+	
+}

@@ -1,0 +1,32 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<f:if condition="{arrows}">
+    <f:then>
+        <div id="offers-before"><a href="#offers-before" class="arrow-down-link"></a></div>
+    </f:then>
+    <f:else>
+        <div style="padding: 40px;"></div>
+    </f:else>
+</f:if>
+<section class="section {f:if(condition: greyShadow, then: 'mosaic-container-grey', else: '')}" id="{f:if(condition: greyShadow, then: '', else: 'offers')}">
+	<div class="{f:if(condition: arrows, then: 'offers-content', else: '')}">
+        <div class="container" >  
+                <ts:render path="mosaicSets"/>
+    		
+    		    <div class="owl-carousel owl-carousel-small visible-xs-block visible-sm-block">
+            	   <f:for each="{mosaicImages}" as="mosaicImage" iteration="mosaicImageIterator">
+            	       <ts:render path="mosaicRender" context="{node: mosaicImage}"/>
+
+            	   </f:for>
+        	   </div>
+            
+    	</div>
+    </div>			
+</section>
+<f:if condition="{arrows}">
+    <f:then>
+    </f:then>
+    <f:else>
+        <div style="padding: 40px;"></div>
+    </f:else>
+</f:if>

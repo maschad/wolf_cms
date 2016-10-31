@@ -1,0 +1,18 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<div style="padding: 40px;"></div>
+<div {attributes -> f:format.raw()}>
+    <section class="system section-colored" id="quote">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-1">
+                    <p class="system quotation-mark">“</p> 
+                </div>
+                <div class="col-xs-10">
+                    <p class="system quote">{neos:contentElement.editable(property: 'title', tag: 'span')}</p>
+                    <p class="system quote-source">{neos:contentElement.editable(property: 'description', tag: 'span')}</p>
+                </div>
+            </div>
+        </div>
+     </section>
+</div>
+<div style="padding: 40px;"></div>

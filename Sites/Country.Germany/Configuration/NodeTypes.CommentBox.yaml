@@ -1,0 +1,25 @@
+'Country.Germany:CommentBox':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: Zitat
+    icon: icon-file-text
+    group: Content
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Kommentator'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Kommentartext'
+    description:
+      type: string
+      ui:
+        label: 'Beschreibung'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Beschreibung'        
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      

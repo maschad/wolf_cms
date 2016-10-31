@@ -1,0 +1,63 @@
+'Country.Germany:SystemWideOverlay':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: 'Bild mit breit Content-Box'
+    group: 'Content'
+    icon: 'icon-list-alt'
+    inspector:
+      groups:
+        image:
+          label: 'Image'
+          icon: 'icon-image'
+          position: 1
+        Box Text:
+          label: Box Text
+  properties:
+    headline:
+      type: string
+      defaultValue: 'Ersetzen Sie mit Ihrer Überschrift Wert ...'
+      ui:
+        label: 'Headline'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie mit Ihrer Überschrift Wert ...'
+        inspector:
+          group: 'Box Text'
+    text:
+      type: string
+      defaultValue: 'Ersetzen Sie mit Ihrem Inhalt'
+      ui:
+        label: 'Text'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie mit Ihrem Inhalt'
+        inspector:
+          group: 'Box Text'
+    link:
+      type: string
+      ui:
+        label: 'Link URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'Box Text'
+    linkText:
+      type: string
+      ui:
+        label: 'Link Text'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie mit Link Text'
+        inspector:
+          group: 'Box Text'    
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'image'
+
+      

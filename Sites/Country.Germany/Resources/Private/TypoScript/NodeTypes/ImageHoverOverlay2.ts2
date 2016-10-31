@@ -1,0 +1,12 @@
+prototype(Country.Germany:ImageHoverOverlay2) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:ImageHoverOverlay2) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/ImageHoverOverlay2.html'
+
+	title = ${q(node).property('title')}
+    	image = ${q(node).property('image')}
+    	description = ${q(node).property('description')}
+    	link = ${q(node).property('link')}
+	linkText = ${q(node).property('linkText')}
+    
+	overlayColor = ${q(node).property('overlayColor')}
+}

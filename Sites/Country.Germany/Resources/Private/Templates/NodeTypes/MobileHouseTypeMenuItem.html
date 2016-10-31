@@ -1,0 +1,22 @@
+<f:section name="Image">
+    <f:if condition="{image}">
+        <f:then>
+            <img class="img-responsive center-block" src="{f:uri.resource(resource: image.resource)}" alt="{alt}">
+        </f:then>
+    </f:if>    
+</f:section>
+
+
+<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{title}<span class="indicator glyphicon glyphicon-menu-down pull-right" aria-hidden="true"></span></a>
+<ul class="dropdown-menu dropdown-menu-large">
+    <li class="col-md-12">
+        <p class="dropdown-header">{title}</p>
+        <f:render section="Image" arguments="{image:node.properties.image, alt:node.properties.title}" /> 
+        <ul>
+            <li><p>{description1}</p></li>
+            <li><p>{description2}</p></li>
+            <li><p>{description3}</p></li>
+        </ul>
+        <a href="#" class="btn btn-custom link-default" role="button">{buttonText}</a>
+    </li>
+</ul>

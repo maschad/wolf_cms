@@ -1,0 +1,77 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<f:section name="Image">
+    <f:if condition="{image}">
+        <f:then>
+            <img class="img-responsive center-block" src="{f:uri.resource(resource: image.resource)}" alt="{alt}">
+        </f:then>
+    </f:if>    
+</f:section>
+
+
+
+<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{title}</a>
+<ul class="dropdown-menu dropdown-menu-large row">
+    <li class="col-sm-4">
+        <f:render section="Image" arguments="{image:node.properties.image, alt:node.properties.title}" />    
+    </li>
+    <li class="col-sm-5">
+        <ul>
+            <li class="dropdown-header">{title}</li>
+            <f:if condition="{description1}">
+                <f:then>
+                    <li><p>{description1}</p></li>
+                </f:then>
+            </f:if>
+            <f:if condition="{description2}">
+                <f:then>
+                    <li><p>{description2}</p></li>
+                </f:then>
+            </f:if>
+            <f:if condition="{description3}">
+                <f:then>
+                    <li><p>{description3}</p></li>
+                </f:then>
+            </f:if>
+        </ul>
+        <f:if condition="{link}">
+            <f:then>
+                <a href="{link}" class="btn btn-custom link-default" role="button">{buttonText}</a>
+            </f:then>
+        </f:if>
+    </li>
+    <li class="col-sm-3">
+        <ul class="links-list">
+            <f:if condition="{link2}">
+                <f:then>
+                    <li><a href="{link2}">{link2Text}</a></li>
+                </f:then>
+            </f:if>
+            <f:if condition="{link3}">
+                <f:then>
+                    <li><a href="{link3}">{link3Text}</a></li>
+                </f:then>
+            </f:if>
+            <f:if condition="{link4}">
+                <f:then>
+                    <li><a href="{link4}">{link4Text}</a></li>
+                </f:then>
+            </f:if>
+            <f:if condition="{link5}">
+                <f:then>
+                    <li><a href="{link5}">{link5Text}</a></li>
+                </f:then>
+            </f:if>
+            <f:if condition="{link6}">
+                <f:then>
+                    <li><a href="{link6}">{link6Text}</a></li>
+                </f:then>
+            </f:if>
+            <f:if condition="{link7}">
+                <f:then>
+                    <li><a href="{link7}">{link7Text}</a></li>
+                </f:then>
+            </f:if>
+        </ul>
+    </li>
+</ul>

@@ -1,0 +1,22 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<f:section name="Image">
+    <f:if condition="{image}">
+        <f:then>
+            <img class="img-responsive center-block" src="{f:uri.resource(resource: image.resource)}" alt="{alt}">
+        </f:then>
+    </f:if>    
+</f:section>
+<div class="offer-overlay-content">
+    <f:render section="Image" arguments="{image:node.properties.image, alt:node.properties.title}" /> 
+    <a href="{link}">
+        <div class="offer-overlay {overlayColor}">
+            <p class="offer-heading">{title}</p>
+            <p>{description}</p>
+            <f:if condition="{linkText}">
+                <f:then>
+                    <p class="offer-link">{linkText}</p>
+                </f:then>
+            </f:if>
+        </div>
+    </a>
+</div>        

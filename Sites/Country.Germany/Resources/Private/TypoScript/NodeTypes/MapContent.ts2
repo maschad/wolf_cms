@@ -1,0 +1,24 @@
+prototype(Country.Germany:MapContent) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MapContent.html'
+
+    node=${node}
+
+    maps = TYPO3.Neos:ContentCollection {
+       nodePath= 'maps'
+    }
+
+    mapNodes = ${q(node).children('maps').children('[instanceof Country.Germany:Map]')}
+
+    icons = ${q(node).children('maps').children().children().children('[instanceof Country.Germany:MapIcon]')}
+
+    mapRender =  Country.Germany:Map{
+      templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/Map.html'
+    }
+
+    iconRender =  Country.Germany:MapIcon{
+      templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MapIcon.html'
+    }
+
+    
+}
+

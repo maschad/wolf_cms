@@ -1,0 +1,33 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<!-- Mobile Nav -->
+<li class="dropdown visible-xs-block" {attributes -> f:format.raw()}>
+    <f:for each="{items}" as="item">
+		<f:if condition="{item.state} == 'current'">
+    		<a class="dropdown-toggle dropdown-small" data-toggle="dropdown" aria-expanded="false">
+    			{item.label} 
+    			<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>	
+			</a>
+		</f:if>	
+	</f:for>
+	<f:render section="itemsList" arguments="{items: items}" />
+</li>
+
+
+<f:section name="itemsList">
+    <ul class="dropdown-menu dropdown-select" role="menu">
+    <f:for each="{items}" as="item">
+			<li{ts:render(path: '{item.state}.attributes', context: {item: item}) -> f:format.raw()}>
+				<f:if condition="{item.node}">
+					<f:then>
+						<neos:link.node node="{item.node}">{item.label}</neos:link.node>
+					</f:then>
+					<f:else>
+						{item.label}
+					</f:else>
+				</f:if>
+			</li>
+		</li>
+		</f:for>
+	</ul>
+</f:section>

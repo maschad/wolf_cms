@@ -1,0 +1,115 @@
+'Country.Germany:HouseDetailContentBox':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: 'Haus Detail Content-Boxen'
+    group: 'Partials'
+    icon: icon-check-empty
+    inspector:
+      groups:
+        Box Text:
+          label: Box Text
+  properties:
+    section:
+      type: string
+      ui:
+        label: 'Überschrift fett'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Überschrift fett'
+        inspector:
+          group: 'Box Text'
+    headline:
+      type: string
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Überschrift'
+        inspector:
+          group: 'Box Text'
+    price:
+      type: string
+      defaultValue: 'Preis'
+      ui:
+        label: 'Preis'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Preis'
+        inspector:
+          group: 'Box Text'
+    text:
+      type: string
+      defaultValue: 'Text'
+      ui:
+        label: 'Text'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Text'
+        inspector:
+          group: 'Box Text'
+    link:
+      type: string
+      ui:
+        label: 'Link URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'Box Text'
+    linkText:
+      type: string
+      ui:
+        label: 'Link Text'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Link Text'
+        inspector:
+          group: 'Box Text' 
+    item1:
+      type: string
+      defaultValue: 'Aufzählungszeichen 1'
+      ui:
+        label: 'Aufzählungszeichen 1'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Aufzählungszeichen 1'
+        inspector:
+          group: 'Box Text'
+    item2:
+      type: string
+      defaultValue: 'Aufzählungszeichen 2'
+      ui:
+        label: 'Aufzählungszeichen 2'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Aufzählungszeichen 2'
+        inspector:
+          group: 'Box Text' 
+    item3:
+      type: string
+      defaultValue: 'Aufzählungszeichen 3'
+      ui:
+        label: 'Aufzählungszeichen 3'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Aufzählungszeichen 3'
+        inspector:
+          group: 'Box Text'  
+    item4:
+      type: string
+      defaultValue: 'Aufzählungszeichen 4'
+      ui:
+        label: 'Aufzählungszeichen 4'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Aufzählungszeichen 4'
+        inspector:
+          group: 'Box Text' 
+     
+    
+      

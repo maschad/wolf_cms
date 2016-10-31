@@ -1,0 +1,56 @@
+prototype(Country.Germany:ImageBox) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:ImageBox) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/ImageBox.html'
+
+	title = ${q(node).property('title')}
+	description = ${q(node).property('description')}
+	blueBackground = ${q(node).property('blueBackground')}
+	arrows = ${q(node).property('arrows')}
+	
+	row1col1 = TYPO3.Neos:ContentCollection
+	row1col1 {
+		nodePath = 'row1col1'
+	}
+
+	row1col2 = TYPO3.Neos:ContentCollection
+	row1col2 {
+		nodePath = 'row1col2'
+	}
+
+	row1col3 = TYPO3.Neos:ContentCollection
+	row1col3 {
+		nodePath = 'row1col3'
+	}
+
+	row2col1 = TYPO3.Neos:ContentCollection
+	row2col1 {
+		nodePath = 'row2col1'
+	}
+
+	row2col2 = TYPO3.Neos:ContentCollection
+	row2col2 {
+		nodePath = 'row2col2'
+	}
+
+	row2col3 = TYPO3.Neos:ContentCollection
+	row2col3 {
+		nodePath = 'row2col3'
+	}
+
+	row3col1 = TYPO3.Neos:ContentCollection
+	row3col1 {
+		nodePath = 'row3col1'
+	}
+
+	row3col2 = TYPO3.Neos:ContentCollection
+	row3col2 {
+		nodePath = 'row3col2'
+	}
+
+	row3col3 = TYPO3.Neos:ContentCollection
+	row3col3 {
+		nodePath = 'row3col3'
+	}
+
+	
+}

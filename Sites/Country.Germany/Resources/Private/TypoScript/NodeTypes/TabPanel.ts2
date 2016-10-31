@@ -1,0 +1,24 @@
+prototype(Country.Germany:TabPanel) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/TabPanel.html'
+
+    node=${node}
+
+    headline = ${q(node).property('headline')}
+    header = ${q(node).property('header')}
+    description = ${q(node).property('description')}
+    descriptionLower = ${q(node).property('descriptionLower')}
+    headline2 = ${q(node).property('headline2')}
+    header2 = ${q(node).property('header2')}
+    description2 = ${q(node).property('description2')}
+    listItem1 = ${q(node).property('listItem1')}
+    listItem2 = ${q(node).property('listItem2')}
+    listItem3 = ${q(node).property('listItem3')}
+    image = ${q(node).property('image')}
+
+    
+   
+   
+
+    
+}
+

@@ -1,0 +1,91 @@
+'Country.Germany:SystemImageBox':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: 'Content mit Spalten'
+    group: 'Content'
+    icon: icon-image
+    inspector:
+      groups:
+        image:
+          label: 'Image'
+          icon: icon-image
+          position: 1
+        Box Text:
+          label: Box Text
+  properties:
+    headline:
+      type: string
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie durch Ihre Schlagzeile Wert ...'
+        inspector:
+          group: 'Box Text'
+    text:
+      type: string
+      defaultValue: 'Ersetzen Sie durch Ihre Inhalte'
+      ui:
+        label: 'Text 1'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie durch Ihre Inhalte'
+        inspector:
+          group: 'Box Text'
+    secondaryText:
+      type: string
+      defaultValue: 'Ersetzen Sie durch Ihre Inhalte'
+      ui:
+        label: 'Text 2'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie durch Ihre Inhalte'
+        inspector:
+          group: 'Box Text'
+    link:
+      type: string
+      ui:
+        label: 'Link URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'Box Text' 
+    buttonText:
+      type: string
+      ui:
+        label: 'Button Text'
+        inlineEditable: TRUE
+        reloadIfChanged: True
+        inspector:
+          group: 'Box Text'     
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'image'
+    borderColor:
+      type: string
+      ui:
+        label: 'Border Color'
+        inlineEditable: false
+        inspector:
+          group: 'image'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              dunkelgrau:
+                label: Dunkelgrau
+              gelb:
+                label: Gelb
+              rot:
+                label: Rot
+              grun:
+                label: Grün
+              blau:
+                label: Blau
+              dunkelrot:
+                label: Dunkelrot

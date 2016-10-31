@@ -1,0 +1,8 @@
+prototype(Country.Germany:NewImage) < prototype(TYPO3.Neos:Content)
+
+prototype(Country.Germany:NewImage) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/ResponsiveImage.html'
+
+	image = ${q(node).property('image')}
+	fitType = ${q(node).property('fitType')}
+}

@@ -1,0 +1,20 @@
+'Country.Germany:MapContent':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  childNodes:
+    maps:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:Map': true
+          '*': false
+  ui:
+    label: Karte-Content
+    icon: icon-columns
+    group: 'Partials'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        mapContent:
+          label: Karte-Content
+

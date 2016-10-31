@@ -1,0 +1,14 @@
+{namespace form=TYPO3\Form\ViewHelpers}
+<f:form.validationResults for="{element.identifier}">
+   
+  
+      <!-- Label for the form element, and required indicator -->
+      <div class="col-md-{element.properties.columnWidth}">
+        
+
+      <!-- the actual form element -->
+        <f:render section="field" />
+        
+      </div>
+  
+</f:form.validationResults>

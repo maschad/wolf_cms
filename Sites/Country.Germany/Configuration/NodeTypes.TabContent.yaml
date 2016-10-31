@@ -1,0 +1,89 @@
+'Country.Germany:TabContent':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  childNodes:
+    tabPanel1:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:TabPanel': true
+          '*': false
+    tabPanel2:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:TabPanel': true
+          '*': false
+    tabPanel3:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:TabPanel': true
+          '*': false
+    tabPanel4:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:TabPanel': true
+          '*': false
+    tabPanel5:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:TabPanel': true
+          '*': false
+  ui:
+    label: Themen-Auswahl 2
+    group: Sliders
+    icon: icon-columns
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        tabContent:
+          label: Tab Content
+  properties:
+    tabName1:
+      type: string
+      ui:
+        label: 'Tab Name 1'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Tab Name 1'
+        inspector:
+          group: 'tabContent'
+    tabName2:
+      type: string
+      ui:
+        label: 'Tab Name 2'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Tab Name 2'
+        inspector:
+          group: 'tabContent'
+    tabName3:
+      type: string
+      ui:
+        label: 'Tab Name 3'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Tab Name 3'
+        inspector:
+          group: 'tabContent'
+    tabName4:
+      type: string
+      ui:
+        label: 'Tab Name 4'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Tab Name 4'
+        inspector:
+          group: 'tabContent'
+    tabName5:
+      type: string
+      ui:
+        label: 'Tab Name 5'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Tab Name 5'
+        inspector:
+          group: 'tabContent'

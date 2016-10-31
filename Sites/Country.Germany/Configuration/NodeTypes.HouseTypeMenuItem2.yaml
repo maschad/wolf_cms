@@ -1,0 +1,68 @@
+'Country.Germany:HouseTypeMenuItem2':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  childNodes:
+    column1:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:HouseMenuItemContent': true
+          '*': false
+    column2:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:HouseMenuItemContent': true
+          '*': false
+    column3:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:HouseMenuItemContent': true
+          '*': false
+    column4:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:HouseMenuItemContent': true
+          '*': false
+  ui:
+    label: System Produkt
+    icon: icon-list
+    group: 'Partials'
+    inspector:
+      groups:
+        houseTypeMenuItem2:
+          label: System Produkt
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Titel'
+        aloha:
+          placeholder: 'Titel'
+        inspector:
+          group: houseTypeMenuItem2
+    layout:
+      type: string
+      defaultValue: '25-25-25-25'
+      ui:
+        reloadIfChanged: TRUE
+        inspector:
+          group: houseTypeMenuItem2
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '25-25-25-25':
+                label: '25% / 25% / 25% / 25%'
+              '50-25-25':
+                label: '50% / 25% / 25%'
+              '25-25-50':
+                label: '25% / 25% / 50%'
+              '25-50-25':
+                label: '25% / 50% / 25%'
+              '75-25':
+                label: '75% / 25%'
+              '25-75':
+                label: '25% / 75%'
+

@@ -1,0 +1,12 @@
+'Country.Germany:Breadcrumb':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Menu': true
+  ui:
+    label: Breadcrumb
+    icon: icon-columns
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        breadcrumb:
+          label: Breadcrumb
+

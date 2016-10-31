@@ -1,0 +1,64 @@
+'Country.Germany:CustomCarouselItem':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Bild mit Überschrift'
+    icon: 'icon-picture'
+    group: 'Partials'
+    inspector:
+      groups:
+        display:
+          label: display
+        headings:
+          label: headings
+  properties:
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Bild'
+        reloadIfChanged: true
+        inspector:
+          group: display
+    heading:
+      type: string
+      ui:
+        label: 'Überschrift'
+        reloadIfChanged: true
+        inspector:
+          group: headings
+    subheading:
+      type: string
+      ui:
+        reloadIfChanged: true
+        label: 'Untertitel'
+        inspector:
+          group: headings
+    link:
+      type: string
+      ui:
+        reloadIfChanged: true
+        label: 'Button  URL'
+        inspector:
+          group: headings
+    buttonText:
+      type: string
+      ui:
+        reloadIfChanged: true
+        label: 'Button Text'
+        inspector:
+          group: headings
+    fitType:
+      type: string
+      defaultValue: 'fitSmall'
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Fit Type'
+        inspector:
+          group: display
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'fitSmall':
+                label: 'Fit Small'
+              'fitLarge':
+                label: 'Fit Large'

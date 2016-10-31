@@ -1,0 +1,9 @@
+prototype(Country.Germany:ImageBoxText) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:ImageBoxText) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/ImageBoxText.html'
+
+	text = ${q(node).property('text')}
+	
+	
+	
+}

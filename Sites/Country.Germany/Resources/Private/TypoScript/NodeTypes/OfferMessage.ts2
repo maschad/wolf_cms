@@ -1,0 +1,13 @@
+prototype(Country.Germany:OfferMessage) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/OfferMessage.html'
+
+    node=${node}
+
+    linkText = ${q(node).property('linkText')}
+    link = ${q(node).property('link')}
+    backgroundColor = ${q(node).property('backgroundColor')}
+    
+
+
+    
+}

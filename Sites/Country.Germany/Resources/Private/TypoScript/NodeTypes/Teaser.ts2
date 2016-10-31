@@ -1,0 +1,10 @@
+prototype(Country.Germany:Teaser) < prototype(TYPO3.Neos:Content) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/Teaser.html'
+    partialRootPath = 'resource://TYPO3.Neos.NodeTypes/Private/Templates/NodeTypes/Partials'
+
+       link = ${q(node).property('link')}
+       date = ${q(node).property('date')}
+       linkText = ${q(node).property('linkText')}
+
+
+} 

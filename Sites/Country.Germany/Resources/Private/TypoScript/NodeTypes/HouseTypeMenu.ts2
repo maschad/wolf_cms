@@ -1,0 +1,39 @@
+prototype(Country.Germany:HouseTypeMenu) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/HouseTypeMenu.html'
+
+    houseTypeItems = ${q(node).children('houseTypes').children('[instanceof Country.Germany:HouseTypeMenuItem]')}
+    houseTypeItems2 = ${q(node).children('houseTypes').children('[instanceof Country.Germany:HouseTypeMenuItem2]')}
+
+
+    node=${node}
+
+    title = ${q(node).property('title')}
+
+    houseTypes = TYPO3.Neos:ContentCollection {
+       nodePath = 'houseTypes'
+    }
+
+    houseTypeItemRender = Country.Germany:HouseTypeMenuItem {
+      templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/HouseTypeMenuItem.html'
+    }
+
+    houseTypeItem2Render = Country.Germany:HouseTypeMenuItem2 {
+      templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/HouseTypeMenuItem2.html'
+    }
+
+    houseTypeItemRender2 = Country.Germany:HouseTypeMenuItem {
+      templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MobileHouseTypeMenuItem.html'
+    }
+
+    mobileMainMenu = Menu
+	mobileMainMenu {
+    	templatePath = 'resource://Country.Germany/Private/Templates/Page/MobileMainMenu.html'
+    	entryLevel = 1
+    	maximumLevels = 3
+	}
+
+   
+
+    
+}
+

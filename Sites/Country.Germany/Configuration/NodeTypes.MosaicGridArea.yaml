@@ -1,0 +1,19 @@
+'Country.Germany:MosaicGridArea':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  childNodes:
+    mosaicGridItems:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Country.Germany:MosaicGridCustomItem': true
+          'Country.Germany:MosaicGridItem': true
+  ui:
+    label: 'Referenzbereich'
+    icon: icon-columns
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        mosaicGridArea:
+          label: MosaicGridArea

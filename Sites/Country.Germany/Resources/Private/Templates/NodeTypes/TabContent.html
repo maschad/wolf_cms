@@ -1,0 +1,83 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<section class="system section-colored hidden-xs" id="solution">
+	<div class="container">
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="tab1">
+            	<ts:render path="tabPanel1" />
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab2">
+            	<ts:render path="tabPanel2" />
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab3">
+            	<ts:render path="tabPanel3" />
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab4">
+            	<ts:render path="tabPanel4" />
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab5">
+            	<ts:render path="tabPanel5" />
+            </div>
+        </div>
+    </div>        
+                        
+                        
+    <div class="container">
+        <!-- Nav tabs -->
+        <ul class="system nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">{node.properties.tabName1}</a></li>
+            <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">{node.properties.tabName2}</a></li>
+            <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">{node.properties.tabName3}</a></li>
+            <li role="presentation"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">{node.properties.tabName4}</a></li>
+            <li role="presentation"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab">{node.properties.tabName5}</a></li>
+        </ul>
+    </div>
+</section>
+
+<div class="system-category-panel panel-group visible-xs-block" id="system-accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="subheadingOne">
+            <a role="button" data-toggle="collapse" data-parent="#system-accordion" href="#collapsedOne" aria-expanded="true" aria-controls="collapsedOne">
+                <h4 class="panel-title">
+                {node.properties.tabName1}<span class="indicator glyphicon glyphicon-menu-down pull-right" aria-hidden="true"></span>
+                </h4>
+            </a>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="subheadingOne">
+            <a role="button" data-toggle="collapse" data-parent="#system-accordion" href="#collapsedOne" aria-expanded="true" aria-controls="collapsedOne">
+                <h4 class="panel-title">
+                {node.properties.tabName2}<span class="indicator glyphicon glyphicon-menu-down pull-right" aria-hidden="true"></span>
+                </h4>
+            </a>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="subheadingOne">
+            <a role="button" data-toggle="collapse" data-parent="#system-accordion" href="#collapsedOne" aria-expanded="true" aria-controls="collapsedOne">
+                <h4 class="panel-title">
+                {node.properties.tabName3}<span class="indicator glyphicon glyphicon-menu-down pull-right" aria-hidden="true"></span>
+                </h4>
+            </a>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="subheadingOne">
+            <a role="button" data-toggle="collapse" data-parent="#system-accordion" href="#collapsedOne" aria-expanded="true" aria-controls="collapsedOne">
+                <h4 class="panel-title">
+                {node.properties.tabName4}<span class="indicator glyphicon glyphicon-menu-down pull-right" aria-hidden="true"></span>
+                </h4>
+            </a>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="subheadingOne">
+            <a role="button" data-toggle="collapse" data-parent="#system-accordion" href="#collapsedOne" aria-expanded="true" aria-controls="collapsedOne">
+                <h4 class="panel-title">
+                {node.properties.tabName5}<span class="indicator glyphicon glyphicon-menu-down pull-right" aria-hidden="true"></span>
+                </h4>
+            </a>
+        </div>
+    </div>
+</div>

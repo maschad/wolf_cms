@@ -1,0 +1,9 @@
+prototype(Country.Germany:MultipleImageLayover) < prototype(Country.Germany:ThreeColumn) {
+
+	fitType = ${q(node).property('fitType')}
+
+	image = ${q(node).property('image')}
+
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MultipleImageLayover.html'
+
+}

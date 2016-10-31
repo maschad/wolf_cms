@@ -1,0 +1,33 @@
+prototype(Country.Germany:HouseTypeMenuItem2) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:HouseTypeMenuItem2) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/HouseTypeMenuItem2.html'
+
+	
+    
+    
+
+
+    node=${node}
+
+    title = ${q(node).property('title')}
+
+    column1 = TYPO3.Neos:ContentCollection {
+       nodePath = 'column1'
+    }
+
+    column2 = TYPO3.Neos:ContentCollection {
+       nodePath = 'column2'
+    }
+
+    column3 = TYPO3.Neos:ContentCollection {
+       nodePath = 'column3'
+    }
+
+    column4 = TYPO3.Neos:ContentCollection {
+       nodePath = 'column4'
+    }
+
+    
+
+	
+}

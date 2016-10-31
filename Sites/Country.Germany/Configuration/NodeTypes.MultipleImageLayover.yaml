@@ -1,0 +1,35 @@
+'Country.Germany:MultipleImageLayover':
+  superTypes:
+    'Country.Germany:ThreeColumn': TRUE
+  ui:
+    label: 'Bild mit 3 Contentboxen'
+    group: 'Content'
+    inspector:
+      groups:
+        responsiveImage:
+          label: 'Image'
+          icon: 'icon-image'
+          position: 1
+  properties:
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'responsiveImage'
+    fitType:
+      type: string
+      defaultValue: 'fitSmall'
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Fit Type'
+        inspector:
+          group: responsiveImage
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'fitSmall':
+                label: 'Fit Small'
+              'fitLarge':
+                label: 'Fit Large'

@@ -1,0 +1,19 @@
+'Country.Germany:ColoredTabCarousel':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  childNodes:
+    carouselItems:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Country.Germany:ColoredItem': true
+  ui:
+    label: Themen-Auswahl
+    group: 'Sliders'
+    icon: icon-columns
+    inlineEditable: true
+    inspector:
+      groups:
+        content:
+          label: Colored Tab Content

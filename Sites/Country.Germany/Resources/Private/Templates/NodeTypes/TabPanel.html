@@ -1,0 +1,38 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+
+<f:section name="Image">  
+    <f:if condition="{image}">
+        <f:then>
+            <img src="{f:uri.resource(resource: image.resource)}" alt="{alt}" class="img-responsive center-block" />
+        </f:then>
+    </f:if>
+</f:section>
+
+<div class="row">
+    <div class="col-md-6">
+       <f:render section="Image" arguments="{image:node.properties.image, alt:node.properties.headliner}" />
+    </div>
+    <div class="col-md-6">
+        <p class="page-title"><strong><neos:contentElement.editable property="headline" tag="span"/></strong> <neos:contentElement.editable property="header" tag="span"/></p>
+        <neos:contentElement.editable property="description" tag="p" class="marg-bot-20"/>
+        <neos:contentElement.editable property="descriptionLower" tag="p" class="marg-bot-15"/>
+    </div>
+</div>
+<div class="row">
+   	<div class="col-md-6">
+        <p class="section-heading"><strong><neos:contentElement.editable property="headline2" tag="span"/></strong> <neos:contentElement.editable property="header2" tag="span"/></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <neos:contentElement.editable property="description2" tag="p" class="marg-bot-20"/>
+    </div>
+    <div class="col-md-6">
+        <ul>
+            <li><neos:contentElement.editable property="listItem1" tag="p"/></li>
+            <li><neos:contentElement.editable property="listItem2" tag="p"/></li>
+            <li><neos:contentElement.editable property="listItem3" tag="p"/></li>
+        </ul>
+    </div>
+</div>

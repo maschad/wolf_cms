@@ -1,0 +1,11 @@
+prototype(Country.Germany:SystemContentBox) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/SystemContentBox.html'
+
+    headline = ${q(node).property('headline')}
+    text = ${q(node).property('text')}
+    image = ${q(node).property('image')}
+    link = ${q(node).property('link')}
+    linkText = ${q(node).property('linkText')}
+
+
+}

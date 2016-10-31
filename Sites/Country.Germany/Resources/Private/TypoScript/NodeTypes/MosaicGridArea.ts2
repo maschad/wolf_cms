@@ -1,0 +1,18 @@
+prototype(Country.Germany:MosaicGridArea) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:MosaicGridArea) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MosaicGridArea.html'
+
+
+	
+	mosaicGridItems = TYPO3.Neos:ContentCollection
+	mosaicGridItems {
+		nodePath = 'mosaicGridItems'
+	}
+
+	mosaicGridItemArray = ${q(node).children('mosaicGridItems').children('[instanceof Country.Germany:MosaicGridItem]')}
+
+	gridItemRender = Country.Germany:MosaicGridItem {
+		templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MosaicGridItem.html'
+
+	}
+}

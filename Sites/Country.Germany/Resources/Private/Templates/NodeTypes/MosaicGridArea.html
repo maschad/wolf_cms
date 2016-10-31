@@ -1,0 +1,12 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<div class="container">
+	<div class="references-content">
+		<ul class="gallery-items">
+		     <f:for each="{mosaicGridItemArray}" as="item" iteration="itemIterator">
+		        <li class="gallery-item" style="opacity: 1;">
+		            <ts:render path="gridItemRender" context="{node: item}"/>
+		        </li>
+		    </f:for>
+		</ul>
+	</div>
+</div>

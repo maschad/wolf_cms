@@ -1,0 +1,20 @@
+'Country.Germany:MosaicSet':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  childNodes:
+    mosaicRows:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:Mosaic': true
+          '*': false
+  ui:
+    label: 'Kachelsatz'
+    icon: icon-check-empty
+    group: 'Partials'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        mosaicSet:
+          label: MosaicSet
+ 

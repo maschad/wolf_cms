@@ -1,0 +1,76 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+
+
+
+
+<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">{title}</a>
+<ul class="dropdown-menu main-menu dropdown-menu-large row">
+
+    <f:if condition="{layout} == '25-25-25-25'">
+    
+        <li class="col-sm-3"><ts:render path="column1"/></li>
+        <li class="col-sm-3"><ts:render path="column2"/></li>
+        <li class="col-sm-3"><ts:render path="column3"/></li>
+        <li class="col-sm-3"><ts:render path="column4"/></li>
+        
+    
+    </f:if> 
+
+    <f:if condition="{layout} == '50-25-25'">
+    
+        <li class="col-sm-6"><ts:render path="column1"/></li>
+        <li class="col-sm-3"><ts:render path="column2"/></li>
+        <li class="col-sm-3"><ts:render path="column3"/></li>
+        
+    
+    </f:if> 
+
+    <f:if condition="{layout} == '25-25-50'">
+    
+        <li class="col-sm-3"><ts:render path="column1"/></li>
+        <li class="col-sm-3"><ts:render path="column2"/></li>
+        <li class="col-sm-6"><ts:render path="column3"/></li>
+        
+    
+    </f:if> 
+
+    <f:if condition="{layout} == '25-50-25'">
+    
+        <li class="col-sm-3"><ts:render path="column1"/></li>
+        <li class="col-sm-6"><ts:render path="column2"/></li>
+        <li class="col-sm-3"><ts:render path="column3"/></li>
+        
+    
+    </f:if> 
+
+    <f:if condition="{layout} == '50-50'">
+    
+        <li class="col-sm-6"><ts:render path="column1"/></li>
+        <li class="col-sm-6"><ts:render path="column2"/></li>
+        
+    
+    </f:if> 
+
+    <f:if condition="{layout} == '75-25'">
+    
+        <li class="col-sm-9"><ts:render path="column1"/></li>
+        <li class="col-sm-3"><ts:render path="column2"/></li>
+        
+    
+    </f:if> 
+
+    <f:if condition="{layout} == '25-75'">
+    
+        <li class="col-sm-3"><ts:render path="column1"/></li>
+        <li class="col-sm-9"><ts:render path="column2"/></li>
+       
+    
+    </f:if>
+    
+    
+</ul>
+
+
+
+ 

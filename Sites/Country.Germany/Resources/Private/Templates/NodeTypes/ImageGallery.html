@@ -1,0 +1,13 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<section class="section" id="image-gallery">
+        <div class="container">
+            <p class="section-heading">{neos:contentElement.editable(property: 'headline', tag: 'span')}</p>
+        	<!--<div id="fotorama_gallery" class="fotorama" data-nav="thumbs" data-arrows="false" data-swipe="false" data-auto="false" data-thumbwidth="90px" data-thumbheight="70px" data-thumbborderwidth="0" data-thumbmargin="15">-->
+                <!--<img src="{f:uri.resource(package: 'Country.Germany', path: 'Images/dummy.png')}" title="Dummy image" alt="Dummy image"/>
+                <img src="{f:uri.resource(package: 'Country.Germany', path: 'Images/dummy.png')}" title="Dummy image" alt="Dummy image"/>
+                <img src="{f:uri.resource(package: 'Country.Germany', path: 'Images/dummy.png')}" title="Dummy image" alt="Dummy image"/>-->
+                <ts:render path="carouselItems"/>
+            </div>
+        </div>
+    </section>

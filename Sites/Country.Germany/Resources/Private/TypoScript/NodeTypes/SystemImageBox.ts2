@@ -1,0 +1,13 @@
+prototype(Country.Germany:SystemImageBox) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/SystemImageBox.html'
+
+    headline = ${q(node).property('headline')}
+    text = ${q(node).property('text')}
+    image = ${q(node).property('image')}
+    link = ${q(node).property('link')}
+    linkText = ${q(node).property('linkText')}
+    buttonText= ${q(node).property('buttonText')}
+    borderColor = ${q(node).property('borderColor')}
+
+
+}

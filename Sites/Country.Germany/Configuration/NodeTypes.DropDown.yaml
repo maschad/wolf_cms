@@ -1,0 +1,63 @@
+'Country.Germany:DropDown':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'DropDown Referenzen'
+    group: 'Menu'
+    icon: icon-image
+    inspector:
+      groups:
+        image:
+          label: 'Image'
+          icon: icon-image
+          position: 1
+        Box Text:
+          label: Box Text
+  properties:
+    label:
+      type: string
+      ui:
+        label: 'Dropdown-Liste'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie durch Ihre Schlagzeile Wert ...'
+        inspector:
+          group: 'Box Text'
+    filterName:
+      type: string
+      ui:
+        label: 'Filter ID'
+        inlineEditable: false
+        inspector:
+          group: 'Box Text'
+    option1:
+      type: string
+      defaultValue: 'Option name'
+      ui:
+        label: 'option name'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: ''
+        inspector:
+          group: 'Box Text'
+    option2:
+      type: string
+      ui:
+        label: 'Option name'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'Box Text' 
+    option3:
+      type: string
+      ui:
+        label: 'Option name'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'Box Text'
+    option4:
+      type: string
+      ui:
+        label: 'Option name'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'Box Text'     

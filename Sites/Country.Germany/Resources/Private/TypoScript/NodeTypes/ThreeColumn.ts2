@@ -1,0 +1,20 @@
+prototype(Country.Germany:ThreeColumn) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/ThreeColumn.html'
+
+    node=${node}
+
+    col1 = TYPO3.Neos:ContentCollection {
+       nodePath= 'col1'
+    }
+
+    col2 = TYPO3.Neos:ContentCollection {
+       nodePath= 'col2'
+    }
+
+    col3 = TYPO3.Neos:ContentCollection {
+       nodePath= 'col3'
+    }
+
+       
+}
+

@@ -1,0 +1,47 @@
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized .tooltipster-box {
+	background-color: rgba(217, 217, 217, 0.85);
+	border-radius: 0;
+	border-color: rgba(217, 217, 217, 0.85);
+}
+
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized .tooltipster-content {
+	color: #000000;
+	padding: 15px 15px 10px;
+}
+
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized.tooltipster-top .tooltipster-arrow {
+	border-left: 11px solid transparent !important;
+	border-right: 11px solid transparent !important;
+	border-top: 12px solid rgba(217, 217, 217, 0.85);
+	bottom: -4px;
+	margin-left: -10px;
+}
+
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized.tooltipster-right .tooltipster-arrow {
+	border-top: 11px solid transparent !important;
+	border-right: 12px solid rgba(217, 217, 217, 0.85);
+	border-bottom: 11px solid transparent !important;
+	margin-left: -4px;
+}
+
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized.tooltipster-bottom .tooltipster-arrow {
+	border-left: 11px solid transparent !important;
+	border-right: 11px solid transparent !important;
+	border-bottom: 12px solid rgba(217, 217, 217, 0.85);
+	top: -4px;
+	margin-left: -10px;
+}
+
+.tooltipster-sidetip.tooltipster-light.tooltipster-light-customized.tooltipster-left .tooltipster-arrow {
+	border-left: 12px solid rgba(217, 217, 217, 0.85);
+	border-top: 11px solid transparent !important;
+	border-bottom: 11px solid transparent !important;
+	margin-right: -4px;
+}
+
+.maptiptool_templates { display: none; }
+
+#maptiptool_content p:first-child {
+	font-size: 18px;
+	font-weight: bold;
+}

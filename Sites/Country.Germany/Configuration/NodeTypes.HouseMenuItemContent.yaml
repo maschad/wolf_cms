@@ -1,0 +1,137 @@
+'Country.Germany:HouseMenuItemContent':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: House Menu Item Content
+    icon: icon-list
+    group: 'Partials'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        houseMenuItemContent:
+          label: House Menu Item Content
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Titel'
+        aloha:
+          placeholder: 'Titel'
+        inspector:
+          group: houseMenuItemContent
+    description:
+      type: string
+      ui:
+        label: 'Beschreibung'
+        aloha:
+          placeholder: 'Beschreibung'
+        inspector:
+          group: houseMenuItemContent
+    listItem1:
+      type: string
+      ui:
+        label: 'List Item 1'
+        aloha:
+          placeholder: 'List Item 1'
+        inspector:
+          group: houseMenuItemContent
+    listItem2:
+      type: string
+      ui:
+        label: 'List Item 2'
+        aloha:
+          placeholder: 'List Item 2'
+        inspector:
+          group: houseMenuItemContent
+    listItem3:
+      type: string
+      ui:
+        label: 'List Item 3'
+        aloha:
+          placeholder: 'List Item 3'    
+        inspector:
+          group: houseMenuItemContent 
+    link1:
+      type: string
+      ui:
+        label: 'Link URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseMenuItemContent'
+    linkText1:
+      type: string
+      ui:
+        label: 'Link 1 Text'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseMenuItemContent'  
+    link2:
+      type: string
+      ui:
+        label: 'Link 1 URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseMenuItemContent'  
+    linkText2:
+      type: string
+      ui:
+        label: 'Link 2 Text'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseMenuItemContent'   
+    link3:
+      type: string
+      ui:
+        label: 'Link 2 URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseMenuItemContent'
+    linkText3:
+      type: string
+      ui:
+        label: 'Link 3 Text'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseMenuItemContent' 
+    link4:
+      type: string
+      ui:
+        label: 'Link 3 URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseMenuItemContent'
+    linkText4:
+      type: string
+      ui:
+        label: 'Link 4 Text'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseMenuItemContent'
+    link5:
+      type: string
+      ui:
+        label: 'Link 4 URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseMenuItemContent'
+    linkText5:
+      type: string
+      ui:
+        label: 'Link 5 Text'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseMenuItemContent'
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: Image
+        reloadIfChanged:  true 
+        inspector:
+          group: houseMenuItemContent
+          editorOptions:
+            crop:
+              aspectRatio:
+                locked:
+                  width:  3 
+                  height:  2 
+

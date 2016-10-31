@@ -1,0 +1,52 @@
+'Country.Germany:Carousel':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: 'Header-Bilderslider'
+    group: 'Sliders'
+    icon: 'icon-picture'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        Box Text:
+          label: Box Text
+        display:
+          label: Display
+  childNodes:
+    carouselItems:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': FALSE
+          'Country.Germany:CarouselItem': TRUE
+  properties:
+    overlayColor:
+      type: string
+      ui:
+        label: 'Farbauswahl'
+        inlineEditable: false
+        inspector:
+          group: display
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              dunkelgrau:
+                label: Dunkelgrau
+              gelb:
+                label: Gelb
+              rot:
+                label: Rot
+              grun:
+                label: Grün
+              blau:
+                label: Blau
+              dunkelrot:
+                label: Dunkelrot
+    heading:
+      type: string
+      ui:
+        label: 'Überschrift'
+        inlineEditable: true
+        reloadIfChanged: true
+        inspector:
+          group: Box Text

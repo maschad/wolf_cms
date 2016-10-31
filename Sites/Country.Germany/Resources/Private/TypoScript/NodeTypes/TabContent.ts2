@@ -1,0 +1,38 @@
+prototype(Country.Germany:TabContent) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/TabContent.html'
+
+    node=${node}
+
+    tabPanel1 = TYPO3.Neos:ContentCollection {
+       nodePath= 'tabPanel1'
+    }
+
+    tabPanel2 = TYPO3.Neos:ContentCollection {
+       nodePath= 'tabPanel2'
+    }
+
+    tabPanel3 = TYPO3.Neos:ContentCollection {
+       nodePath= 'tabPanel3'
+    }
+
+    tabPanel4 = TYPO3.Neos:ContentCollection {
+       nodePath= 'tabPanel4'
+    }
+
+    tabPanel5 = TYPO3.Neos:ContentCollection {
+       nodePath= 'tabPanel5'
+    }
+
+    tabName1 =  ${q(node).property('tabName1')}
+    tabName2 =  ${q(node).property('tabName2')}
+    tabName3 =  ${q(node).property('tabName3')}
+    tabName4 =  ${q(node).property('tabName4')}
+    tabName5 =  ${q(node).property('tabName5')}
+
+    
+   
+   
+
+    
+}
+

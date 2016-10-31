@@ -1,0 +1,11 @@
+'Country.Germany:ContactForm':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: ContactForm
+    group: 'general'
+    icon: icon-envelope-o
+    inspector:
+      groups:
+        contactForm:
+          label: ContactForm

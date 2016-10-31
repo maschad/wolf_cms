@@ -1,0 +1,126 @@
+'Country.Germany:TabPanel':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: Tab Panel
+    icon: icon-check-empty
+    group: hidden
+    inspector:
+      groups:
+        tabPanel:
+          label: Tab Panel
+  properties:
+    headline:
+      type: string
+      defaultValue: 'Die beste lösung'
+      ui:
+        label: 'Überschrift'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Überschrift'
+        inspector:
+          group: 'tabPanel'
+    header:
+      type: string
+      defaultValue: 'für mensch und tier'
+      ui:
+        label: 'Header'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Header'
+        inspector:
+          group: 'tabPanel' 
+    description:
+      type: string
+      ui:
+        label: 'Description 1'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Description'  
+        inspector:
+          group: 'tabPanel'     
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+    descriptionLower:
+      type: string
+      ui:
+        label: 'Lower Description 1'
+        inlineEditable: true
+        aloha:
+          placeholder: ' Lower Description'  
+        inspector:
+          group: 'tabPanel'     
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+    headline2:
+      type: string
+      defaultValue: 'Alle fakten'
+      ui:
+        label: 'Headline 2'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Headline 2'
+        inspector:
+          group: 'tabPanel'
+    header2:
+      type: string
+      defaultValue: 'zu diesem thema'
+      ui:
+        label: 'Header 2'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Header 2'
+        inspector:
+          group: 'tabPanel'
+    description2:
+      type: string
+      ui:
+        label: 'Description 2'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Description 2'  
+        inspector:
+          group: 'tabPanel'     
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+    listItem1:
+      type: string
+      defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam sed sit tempore officiis sequi eligendi corporis, hic assumenda facilis.'
+      ui:
+        label: 'List Item 1'
+        inlineEditable: true
+        aloha:
+          placeholder: 'List Item 1'
+        inspector:
+          group: 'tabPanel'
+    listItem2:
+      type: string
+      defaultValue: 'Dolor numquam officiis asperiores ad quia neque dolorem aperiam.'
+      ui:
+        label: 'List Item 2'
+        inlineEditable: true
+        aloha:
+          placeholder: 'List Item 2'
+        inspector:
+          group: 'tabPanel'  
+    listItem3:
+      type: string
+      defaultValue: 'Odit adipisci molestias porro illum ducimus pariatur ab corrupti placeat.'
+      ui:
+        label: 'List Item 3'
+        inlineEditable: true
+        aloha:
+          placeholder: 'List Item 3'
+        inspector:
+          group: 'tabPanel'
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: Image
+        reloadIfChanged:  true 
+        inspector:
+          group: 'tabPanel'
+          editorOptions:
+            crop:
+              aspectRatio:
+                locked:
+                  width:  3 
+                  height:  2 
+      

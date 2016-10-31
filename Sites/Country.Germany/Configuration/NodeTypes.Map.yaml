@@ -1,0 +1,78 @@
+'Country.Germany:Map':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  childNodes:
+    iconTopLeft:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:MapIcon': true
+          '*': false
+    iconTopRight:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:MapIcon': true
+          '*': false
+    iconMidRight:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:MapIcon': true
+          '*': false
+    iconMidCenterRight:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:MapIcon': true
+          '*': false
+    iconBottom:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:MapIcon': true
+          '*': false
+    iconMidLeft:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:MapIcon': true
+          '*': false
+    iconMidCenterLeft:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:MapIcon': true
+          '*': false
+  ui:
+    label: Karte
+    icon: icon-map
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        map:
+          label: Karte
+  properties:
+    name:
+      type: string
+      ui:
+        label: 'Name'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Karte Name'
+        inspector:
+          group: 'map'
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: Image
+        reloadIfChanged:  true 
+        inspector:
+          group: 'map'
+          editorOptions:
+            crop:
+              aspectRatio:
+                locked:
+                  width:  3 
+                  height:  2
+

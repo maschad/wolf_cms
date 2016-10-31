@@ -1,0 +1,6 @@
+prototype(Country.Germany:YouTube) < prototype(TYPO3.Neos:Content) {
+        templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/YouTube.html'
+        videoUrl = ${q(node).property('videoUrl')}
+        width = '640'
+        height = '360'
+}

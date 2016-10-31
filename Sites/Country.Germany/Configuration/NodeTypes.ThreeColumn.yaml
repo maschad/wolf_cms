@@ -1,0 +1,30 @@
+'Country.Germany:ThreeColumn':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  childNodes:
+    col1:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ContentBox': true
+          'Country.Germany:HouseDetailContentBox': true
+          '*': false
+    col2:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ContentBox': true
+          'Country.Germany:HouseDetailContentBox': true
+          '*': false
+    col3:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ContentBox': true
+          'Country.Germany:HouseDetailContentBox': true
+          '*': false
+  ui:
+    label: drei Kolonnen
+    icon: icon-columns
+    group: 'Partials'
+    

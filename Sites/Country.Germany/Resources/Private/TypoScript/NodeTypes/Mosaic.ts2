@@ -1,0 +1,41 @@
+prototype(Country.Germany:Mosaic) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:Mosaic) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/Mosaic.html'
+	layout = ${q(node).property('layout')}
+	column1 = TYPO3.Neos:ContentCollection
+	column1 {
+		nodePath = 'column1'
+
+		
+	}
+
+	column2 = TYPO3.Neos:ContentCollection
+	column2 {
+		nodePath = 'column2'
+
+		
+	}
+
+	column3 = TYPO3.Neos:ContentCollection
+	column3 {
+		nodePath = 'column3'
+
+		
+	}
+
+	column4 = TYPO3.Neos:ContentCollection
+	column4 {
+		nodePath = 'column4'
+
+		
+	}
+
+	prototype(TYPO3.Neos.NodeTypes:Image) {
+        // The first item should later be marked as active
+        attributes.class = 'img-responsive'
+
+        templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MosaicItem.html'
+
+                
+    }
+}

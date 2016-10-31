@@ -1,0 +1,36 @@
+prototype(Country.Germany:Carousel) {
+        carouselItems = TYPO3.Neos:ContentCollection {
+                nodePath = 'carouselItems'
+                content.iterationName = 'carouselItemsIteration'
+                attributes.class = 'carousel-inner'
+
+        }
+
+        overlayColor = ${q(node).property('overlayColor')}
+    	 heading = ${q(node).property('heading')}
+
+
+
+        // Collect the carousels children but only images
+        carouselItemArray = ${q(node).children('carouselItems').children('[instanceof Country.Germany:CarouselItem]')}
+        carouselItemCount = ${q(node).children('carouselItems').children('[instanceof Country.Germany:CarouselItem]').count()}
+
+        // Enhance image prototype when inside the carousel
+        prototype(Country.Germany:CarouselItem) {
+                // Render images in the carousel with a special template.
+                templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/CarouselItem.html'
+
+                // The first item should later be marked as active
+                attributes.class = ${'item' + (carouselItemsIteration.isFirst ? ' active' : '')}
+
+                // We want to use the item iterator in fluid so we have to store it as variable.
+                iteration = ${carouselItemsIteration}
+
+		image = ${q(node).property('image')}
+		fitType = ${q(node).property('fitType')}
+		link = ${q(node).property('link')}
+		linkText = ${q(node).property('linkText')}
+
+
+        }
+}

@@ -1,0 +1,24 @@
+'Country.Germany:ImageBoxText':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: 'Bild Box Text'
+    icon: icon-file-text
+    group: 'Partials'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        imageBoxText:
+          label: ImageBox
+  properties:
+    text:
+      type: string
+      ui:
+        label: 'Text'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Text'
+        inspector:
+          group: 'imageBoxText'
+    
+ 

@@ -1,0 +1,158 @@
+.sj-fullwidth {
+	height: 400px;
+	background: no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+.sj-text-over-picture {
+	text-align: left;
+}
+.sj-text-over-picture h2 {
+	color: #fff;
+	font-size: 42px;
+	line-height: 70px;
+	margin:0;
+}
+.sj-text-over-picture {
+	position: relative;
+	color: #fff;
+	font-size: 30px;
+	line-height: 20px;
+	font-weight: 100;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.sj-fullwidth span {
+	background-color: rgba(174, 175, 179, 0.74);	
+}
+.sj-fullwidth h2 span { padding: 11px; }
+.sj-fullwidth p span { padding: 0px 1px; }
+
+.logo{
+	height: 30px;
+	width: 35px;
+}
+
+.teaser-image{
+	display: block;
+	width: 100%;
+	height: 170px;
+}
+
+.hover-overlay-image{
+	display: block;
+	width: 100%;
+	height: 170px;
+}
+
+.mosaic-container-grey{
+	background-color: #e8e8e8;
+	transform: skewY(-4deg);
+}
+
+.mosaic-container-grey .container{
+	transform: skewY(4deg);
+}
+
+.publicaton-list-view li, .news-list-view li {
+  float: left;
+  display: table-cell;
+  width: 100%;
+}
+
+/* Mosaic Item */
+/*.col-md-3.mosaic-item{
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.col-md-6.mosaic-item{
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}*/
+
+.breadcrumb li+li:before {
+	content: url(../Images/arrow_right.png);
+	padding: 0 12px 0 8px;
+}
+.breadcrumb li a {
+	color: #adafb2;
+	font-weight: bold;
+}
+.breadcrumb li a:hover {
+	color: #000000;
+}
+.breadcrumb .active {
+	color: #000000;
+}
+
+.breadcrumb li {
+	display: inline-block;
+}
+
+.img-fit-large {
+	min-width: 100%;
+    height: auto;
+}
+
+.teaser-container{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.feature-blue{
+	background-color: #d0e1e1;
+}
+
+.feature-original{
+	background-color: #ffffff;
+	
+}
+
+.image-box-text{
+	background-color: #ffffff;
+	height: 210px;
+	padding: 20px;
+	font-size: 30px;
+	line-height: 38px;
+}
+
+.image-box-text p{
+	font-size: 26px;
+	line-height: 34px;
+}
+
+.image-box-image{
+	width: 280px;
+	height: 210px;
+}
+
+.dunkelgrau  {
+	background-color: rgba(174,175,179, 0.69);
+}
+.gelb  {
+	background-color: rgba(240, 177, 2, 0.69);
+}
+.rot  {
+	background-color: rgba(228,6,17, 0.69);
+}
+.blau  {
+	background-color: rgba(3, 184, 237, 0.69);
+}
+.dunkelrot  {
+	background-color: rgba(131, 1, 37, 0.69);
+}
+.grun  {
+	background-color: rgba(149, 193, 34, 0.69);
+}
+
+.weiss  {
+	background-color: rgba(255, 255, 255, 0.69);
+}
+

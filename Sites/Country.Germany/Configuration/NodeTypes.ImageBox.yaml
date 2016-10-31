@@ -1,0 +1,112 @@
+'Country.Germany:ImageBox':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  childNodes:
+    row1col1:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay2': true
+          'Country.Germany:ImageBoxText': true
+          '*': false
+
+    row1col2:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay2': true
+          'Country.Germany:ImageBoxText': true
+          '*': false
+    row1col3:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay2': true
+          'Country.Germany:ImageBoxText': true
+          '*': false
+    row2col1:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay2': true
+          'Country.Germany:ImageBoxText': true
+          '*': false
+    row2col2:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay2': true
+          'Country.Germany:ImageBoxText': true
+          '*': false
+    row2col3:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay2': true
+          'Country.Germany:ImageBoxText': true
+          '*': false
+    row3col1:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay2': true
+          'Country.Germany:ImageBoxText': true
+          '*': false
+    row3col2:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay2': true
+          'Country.Germany:ImageBoxText': true
+          '*': false
+    row3col3:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:ImageHoverOverlay2': true
+          'Country.Germany:ImageBoxText': true
+          '*': false
+  ui:
+    label: 'Image Box'
+    icon: icon-list
+    group: 'Partials'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        imageBox:
+          label: ImageBox
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Image Box Title'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Title'
+        inspector:
+          group: 'imageBox'
+    description:
+      type: string
+      ui:
+        label: 'Image Box Description'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Description'  
+        inspector:
+          group: 'imageBox'     
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+    blueBackground:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'Blue Background'
+        inspector:
+            group: 'imageBox'
+    arrows:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: 'Include Arrows'
+        inspector:
+            group: 'imageBox'
+ 

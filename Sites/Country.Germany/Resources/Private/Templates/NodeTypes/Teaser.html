@@ -1,0 +1,31 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<div class="thumbnail">
+        <f:section name="Image">
+            
+                <f:if condition="{image}">
+                    <f:then>
+                        <img src="{f:uri.resource(resource: image.resource)}" alt="{alt}" class="teaser-image" />
+                    </f:then>
+                </f:if>
+            
+        </f:section>
+        <f:render section="Image" arguments="{image:node.properties.image, alt:node.properties.title}" />
+        <div class="thumbnail-content">
+            <div class="thumbnail-heading">
+                <neos:contentElement.editable property="title" tag="h4"  class="thumbnail-heading"/>
+            </div>
+            
+            <p class="thumbnail-date">{neos:contentElement.editable(property: 'date', tag: 'span')}</p>
+
+            <neos:contentElement.editable property="description" tag="p" />
+                {node.properties.reference}
+           <f:if condition="{linkText}">
+                <f:then>
+                    <a class="link-default" href="{link}">{neos:contentElement.editable(property: 'linkText', tag: 'span')}</a>
+                </f:then>
+            </f:if>
+        </div>
+</div>
+
+
+

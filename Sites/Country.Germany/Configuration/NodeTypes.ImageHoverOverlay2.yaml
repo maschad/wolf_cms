@@ -1,0 +1,84 @@
+'Country.Germany:ImageHoverOverlay2':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Transparente Ebene'
+    icon: icon-picture
+    group: 'Partials'
+    inspector:
+      groups:
+        details:
+          label: details
+        display:
+          label: Display
+  properties:  
+    title:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Transparente Titel'
+        inlineEditable: true
+        aloha:
+          placeholder: ''
+        inspector:
+          group: details
+    description:
+      type: string
+      defaultValue: 'Traunkirchen (Oberösterreich)'
+      ui:
+        label: 'Overlay Description'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Text'  
+        inspector:
+          group: details     
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+    linkText:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Link Text'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Text'  
+        inspector:
+          group: details
+    link:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Link URL'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Text'  
+        inspector:
+          group: details       
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: Image
+        reloadIfChanged:  true 
+        inspector:
+          group: display
+    overlayColor:
+      type: string
+      ui:
+        label: 'Farbauswahl'
+        inlineEditable: false
+        inspector:
+          group: display
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              dunkelgrau:
+                label: Dunkelgrau
+              gelb:
+                label: Gelb
+              rot:
+                label: Rot
+              grun:
+                label: Grün
+              blau:
+                label: Blau
+              dunkelrot:
+                label: Dunkelrot

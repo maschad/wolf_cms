@@ -1,0 +1,35 @@
+'Country.Germany:MosaicContentBox':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  childNodes:
+    mosaicSets:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Country.Germany:MosaicSet': true
+          '*': false
+  ui:
+    label: 'Kacheln'
+    icon: icon-check-empty
+    group: 'Sliders'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        mosaic:
+          label: MosaicContentBox
+  properties:
+    greyShadow:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: 'Schattenbereich'
+        inspector:
+            group: 'mosaic'
+    arrows:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: 'Pfeile'
+        inspector:
+            group: 'mosaic'
+ 

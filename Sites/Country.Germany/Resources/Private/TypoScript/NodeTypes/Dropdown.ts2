@@ -1,0 +1,11 @@
+prototype(Country.Germany:Dropdown) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/Dropdown.html'
+
+    label = ${q(node).property('label')}
+    option1 = ${q(node).property('option1')}
+    option2 = ${q(node).property('option2')}
+    option3 = ${q(node).property('option3')}
+    option4 = ${q(node).property('option4')}
+
+    filterName = ${q(node).property('filterName')}
+}

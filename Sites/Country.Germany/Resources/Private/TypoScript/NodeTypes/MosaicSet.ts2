@@ -1,0 +1,21 @@
+prototype(Country.Germany:MosaicSet) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:MosaicSet) {
+	templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MosaicSet.html'
+
+	
+
+	
+
+	
+  
+ 
+	
+	mosaicRows = TYPO3.Neos:ContentCollection
+	mosaicRows {
+		nodePath = 'mosaicRows'
+
+		
+	}
+
+	
+}

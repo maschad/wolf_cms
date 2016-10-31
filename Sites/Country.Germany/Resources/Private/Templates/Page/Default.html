@@ -1,0 +1,466 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    
+   
+
+   
+
+    <title>Wolf Haus</title>
+    <f:section name="meta">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    </f:section>
+    
+    <f:section name="stylesheets">
+        <link rel="stylesheet" href="{f:uri.resource(path: '3/css/bootstrap.min.css', package: 'TYPO3.Twitter.Bootstrap')}" media="all" />
+        
+        <!--<link rel="stylesheet" href="{f:uri.resource(path:'Styles/wolf-haus.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/styles.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/styles-system.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/styles-system-new.css', package:'Country.Germany')}" />-->
+        
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/styles-house.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/owl.theme.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/animate.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'font-awesome/css/font-awesome.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/tooltipster.bundle.min.css', package:'Country.Germany')}">
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/tooltipster-sideTip-light.min.css', package:'Country.Germany')}">
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/tooltipster-sideTip-light-customised.css', package:'Country.Germany')}">  
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/bootstrap-datetimepicker.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/fotorama.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/owl.carousel.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/jquery.gridder.min.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/Main.css', package:'Country.Germany')}" />
+        <link rel="stylesheet" href="{f:uri.resource(path:'Styles/imagelistexpander.css', package: 'Country.Germany')}"></link>
+
+
+        
+
+    </f:section>
+    <f:section name="headScripts">
+        <!-- Put your scripts inclusions for the head here, they will be included in your website by TypoScript -->
+    </f:section>
+
+
+</head>
+<body>
+<f:section name="body">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand navbar-link" href="http://neosdemo.neuim.net/">
+                <img src="{f:uri.resource(path:'Images/logo.png', package:'Country.Germany')}" class="img-responsive center-block hidden-xs hidden-sm">
+                <img src="{f:uri.resource(path:'Images/logo-sm.png', package:'Country.Germany')}" class="img-responsive center-block visible-xs-block visible-sm-block">
+            </a>
+             <!--  Mobile Nav -->
+                <ul class="navbar-mobile">
+                    {parts.mobileLanguageMenu -> f:format.raw()}
+                    {parts.mobileCountryMenu -> f:format.raw()}
+                    <li class="visible-xs-block"><a href="#contactForm" data-toggle="modal"><img src="{f:uri.resource(path:'Images/mail_black.png', package:'Country.Germany')}"></a></li>
+                    <li class="dropdown visible-xs-block"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{f:uri.resource(path:'Images/search_icon.png', package:'Country.Germany')}"></a>
+                        <ul class="dropdown-menu dropdown-menu-search" role="menu">
+                            <input type="text" name="search">
+                        </ul>
+                    </li>
+                    <li class="visible-xs-block"><button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-col"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></li>
+                </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="nav-col">
+            <div class="hidden-xs">
+                <!-- Main Nav -->
+                <div id="main-nav-wrapper">
+                    <div class="container">
+                        <ul class="nav navbar-nav main-nav pull-right" id="main-nav">
+                            {parts.mainMenu -> f:format.raw()}
+                            {parts.languageMenu -> f:format.raw()} 
+                            {parts.countryMenu -> f:format.raw()} 
+                            <li class="">
+                                <form id="search" action="#" method="post">
+                                    <div id="label"><label for="search-terms" id="search-label">search</label></div>
+                                    <div class="input-wrapper" id="input-wrapper">
+                                        <div id="input"><input type="text" name="search-terms" id="search-terms" placeholder="Wonach suchen Sie?"></div>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {content.header -> f:format.raw()} 
+            </div>
+
+            <div class="panel-group responsive-panel visible-xs-block" id="accordionResponsive" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading collapsed" role="tab" id="headingOneResponsive" data-toggle="collapse" data-parent="#accordionResponsive" href="#collapseOneResponsive" aria-expanded="false" aria-controls="collapseOneResponsive">
+                        <h4 class="panel-title main-title">
+                                    Sonstige Informationen <span class="indicator glyphicon glyphicon-menu-down pull-right" aria-hidden="true"></span>
+                        </h4>
+                    </div>
+                    <div id="collapseOneResponsive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOneResponsive">
+                        <div class="panel-body">
+                            <ul class="nav navbar-nav main-nav">
+                                {parts.mobileMainMenu -> f:format.raw()}
+                            </ul>
+                        </div>   
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </nav>   
+    <div class="cover-fade-out" style="display: none;"></div>
+    <div class="content-body">
+        {content.main -> f:format.raw()}
+    </div>
+
+     <!-- Cookies alert -->
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <div class="container"> 
+            <div class="row"> 
+                <div class="col-md-9"> 
+                    Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklären Sie sich damit einverstanden, dass wir Cookies verwenden. <a href="" class="link-default">Mehr Informationen</a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="btn btn-cookies link-default" role="button" data-dismiss="alert" aria-label="Close"><p>Akzeptieren und fortfahren</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="back-to-top" class="hidden-xs"></a>
+
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                {content.footer -> f:format.raw()}
+
+                <!-- <div class="col-xs-12 col-sm-12 col-md-4"> 
+                    <p>&copy; 2015 Wolf Systembau Ges.m.b.H</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8">
+                    <ul class="footer-links">
+                        <li class=""><a href="#"><img src="{f:uri.resource(path:'Images/mail.png', package:'Country.Germany')}" class="footer-img-links">  Newsletter Anmeldung </a></li>
+                        <li class=""><a href="#">Kontakt </a></li>
+                        <li class=""><a href="#">Rechtlicher Hinweis </a></li>
+                        <li class=""><a href="#">AGB </a></li>
+                        <li class=""><a href="#">Impressum </a></li>
+                        <li class="">
+                            <a href=""><img src="{f:uri.resource(path:'Images/facebook.png', package:'Country.Germany')}" class="footer-img-links"></a>
+                            <a href=""><img src="{f:uri.resource(path:'Images/youtube.png', package:'Country.Germany')}" class="footer-img-links"></a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+    
+</f:section>
+<f:section name="bodyScripts">
+    <!-- Put your scripts inclusions for the end of the body here, they will be included in your website by TypoScript -->
+    <script src="{f:uri.resource(path: 'Javascript/jquery.min.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: '3/js/bootstrap.min.js', package: 'TYPO3.Twitter.Bootstrap')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/wolf.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/owl.carousel.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/owl.carousel.control.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/classie.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/wow.min.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/tooltipster.bundle.min.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/imageMapResizer.min.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/moment.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/bootstrap-datetimepicker.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/jquery.mobile.custom.min.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/fotorama.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/select.js', package: 'Country.Germany')}"></script>
+    <script src="{f:uri.resource(path: 'Javascript/jquery.imagelistexpander.js', package: 'Country.Germany')}"></script>
+
+
+
+    <script>
+        $('ul.nav li.dropdown').hover(function() {
+            $(this).find('.main-menu').stop(true, true).fadeIn("slow");
+        }, function() {
+            $(this).find('.main-menu').stop(true, true).fadeOut("fast");
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.maptiptool').tooltipster();
+        });
+
+        $('.maptiptool-top').tooltipster({
+            theme: ['tooltipster-light', 'tooltipster-light-customized'],
+            contentCloning: true,
+            side: 'top'
+        });
+        $('.maptiptool-right').tooltipster({
+            theme: ['tooltipster-light', 'tooltipster-light-customized'],
+            contentCloning: true,
+            side: 'right'
+        });
+        $('.maptiptool-bottom').tooltipster({
+            theme: ['tooltipster-light', 'tooltipster-light-customized'],
+            contentCloning: true,
+            side: 'bottom'
+        });
+        $('.maptiptool-left').tooltipster({
+            theme: ['tooltipster-light', 'tooltipster-light-customized'],
+            contentCloning: true,
+            side: 'left'
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#Map1').imageMapResize();
+        });
+    </script>
+
+    <script> new WOW().init(); </script>
+
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 300) {
+                $('nav').addClass('navbar-shrink');
+            } else {
+                $('nav').removeClass('navbar-shrink');
+            }
+        });
+    </script>
+
+    <script>
+        // Collapse accordion every time dropdown is shown
+        $('.dropdown-accordion').on('show.bs.dropdown', function (event) {
+            var accordion = $(this).find($(this).data('accordion'));
+            accordion.find('.panel-collapse.in').collapse('hide');
+        });
+
+        // Prevent dropdown to be closed when we click on an accordion link
+        $('.dropdown-accordion').on('click', 'a[data-toggle="collapse"]', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $($(this).data('parent')).find('.panel-collapse.in').collapse('hide');
+            $($(this).attr('href')).collapse('show');
+        })
+    </script>
+
+    <script>
+        function toggleChevron(e) {
+            $(e.target)
+                .prev('.panel-heading')
+                .find("span.indicator")
+                .toggleClass('glyphicon-menu-down glyphicon-menu-up');
+        }
+        $('.panel-group').on('hidden.bs.collapse', toggleChevron);
+        $('.panel-group').on('shown.bs.collapse', toggleChevron);
+
+        function toggleArrow(f) {
+            $(f.target)
+                .prev('.toggle-arrows')
+                .find("span.indicator")
+                .toggleClass('glyphicon-menu-up glyphicon-menu-down');
+        }
+        $('.toggle-accordion').on('hidden.bs.collapse', toggleArrow);
+        $('.toggle-accordion').on('shown.bs.collapse', toggleArrow);
+
+        function toggleMenu(g) {
+            $(g.target)
+                .find("span.indicator")
+                .toggleClass('glyphicon-menu-down glyphicon-menu-up');
+        }
+        $('.toggle-menu').on('hidden.bs.dropdown', toggleMenu);
+        $('.toggle-menu').on('shown.bs.dropdown', toggleMenu);
+    </script>
+    <script>
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 500, // px
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+    </script>
+
+    <script>
+        $('ul.nav li.dropdown').hover(function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn("fast");
+        }, function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut("fast");
+        });
+    </script>
+
+    <script>
+        (function(global, $){
+            $('.gallery-items').imagelistexpander({
+                prefix: "gallery-"
+            });
+        })(this, jQuery)
+    </script>
+
+
+    <script>
+        (function(window){
+            
+            var searchEl = document.querySelector("#input");
+            var wrapperEl = document.querySelector(".input-wrapper");
+            var labelEl = document.querySelector("#label");
+
+            // register clicks and toggle classes
+            labelEl.addEventListener("click",function(){
+                if (classie.has(searchEl,"focus")) {
+                    classie.remove(searchEl,"focus");
+                    classie.remove(wrapperEl,"focus");
+                    classie.remove(labelEl,"active");
+                } else {
+                    classie.add(searchEl,"focus");
+                    classie.add(wrapperEl,"focus");
+                    classie.add(labelEl,"active");
+                }
+            });
+
+            // register clicks outisde search box, and toggle correct classes
+            document.addEventListener("click",function(e){
+                var clickedID = e.target.id;
+                if (clickedID != "search-terms" && clickedID != "search-label" && clickedID != "input-wrapper") {
+                    if (classie.has(searchEl,"focus")) {
+                        classie.remove(searchEl,"focus");
+                        classie.remove(wrapperEl,"focus");
+                        classie.remove(labelEl,"active");
+                    }
+                }
+            });
+        }(window));
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            fadeInGroup('.gallery-item');
+            // fadeInGroup('.completely_different_group');    
+        });
+                                  
+        function fadeInGroup(group){
+            $(group).each(function(index, element) {    
+                var d = (130 * (index)).toString()
+                $(this).delay(d).fadeTo('slow',1);
+            });
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker({
+                format: 'DD MM YYYY'
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $((".arrow-down-link, .arrow-up-link")).on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (700) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 700, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel-small").owlCarousel({
+                navigation: true,
+                navigationText: ["<img src='{f:uri.resource(path:'Images/carousel_left.png', package:'Country.Germany')}'>","<img src='{f:uri.resource(path:'Images/carousel_right.png', package:'Country.Germany')}'>"]
+            }); 
+
+            $("#owl-carousel-large").owlCarousel({
+                singleItem : true,
+                navigation: true,
+                navigationText: ["<img src='{f:uri.resource(path:'Images/left-gray.png', package:'Country.Germany')}'>","<img src='{f:uri.resource(path:'Images/right-gray.png', package:'Country.Germany')}'>"]
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+           $(".carousel").swiperight(function() {
+              $(this).carousel('prev');
+            });
+           $(".carousel").swipeleft(function() {
+              $(this).carousel('next');
+           });
+        });
+    </script>
+    <script>
+            var $fotoramaDiv = $('#fotorama_gallery').fotorama();
+
+            var fotorama = $fotoramaDiv.data('fotorama');
+ 
+            $("<div class='fotorama_gallery__arr fotorama_gallery__arr--prev'><img src='{f:uri.resource(path:'Images/left-black.png', package:'Country.Germany')}'></div>").appendTo(".fotorama__nav-wrap");
+            $("<div class='fotorama_gallery__arr fotorama_gallery__arr--next'><img src='{f:uri.resource(path:'Images/right-black.png', package:'Country.Germany')}''></div>").appendTo(".fotorama__nav-wrap");
+            $("<div class='fotorama__thumb-overlay'></div>").appendTo(".fotorama__thumb");
+
+            $('.fotorama_gallery__arr--prev').click(function () {
+                fotorama.show('<');
+            });
+            $('.fotorama_gallery__arr--next').click(function () {
+                fotorama.show('>');
+            });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            // fadeInGroup('.gallery-item');
+            fadeInGroup('#reference .thumbnail-overlay-content');    
+        });
+                                  
+        function fadeInGroup(group){
+            $(group).each(function(index, element) {    
+                var d = (130 * (index)).toString()
+                $(this).delay(d).fadeTo('slow',1);
+            });
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#Map2').imageMapResize();
+        });
+    </script>
+</f:section>
+</body>
+
+</html>

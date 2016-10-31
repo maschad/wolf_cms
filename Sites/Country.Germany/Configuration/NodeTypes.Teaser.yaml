@@ -1,0 +1,76 @@
+'Country.Germany:Teaser':
+  superTypes:
+    'TYPO3.Neos:Content': true
+    'Flowpack.Listable:ListableMixin': true
+  ui:
+    label: Teaser-Boxen in Spalten
+    group: 'general'
+    icon: icon-picture
+    inspector:
+      groups:
+        teaser:
+          label: Teaser
+        image:
+          label: 'Image'
+          icon: 'icon-image'
+          position: 1
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Name'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Titel of Teaser'
+        inspector:
+          group: 'teaser'
+    date:
+      type: string
+      ui:
+        label: 'Date'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Date of Article'
+        inspector:
+          group: 'teaser'
+    description:
+      type: string
+      ui:
+        label: 'Teaser text'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Teaser text' 
+        inspector:
+          group: 'teaser' 
+    link:
+      type: string
+      ui:
+        label: 'Link URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'teaser'
+    linkText:
+      type: string
+      ui:
+        label: 'Link Text'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie mit Link Text'
+        inspector:
+          group: 'teaser'         
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: Image
+        reloadIfChanged:  true 
+        inspector:
+          group: 'image'
+          editorOptions:
+            features:
+              crop: TRUE
+            crop:
+              aspectRatio:
+                locked:
+                  width: 3
+                  height: 2
+      

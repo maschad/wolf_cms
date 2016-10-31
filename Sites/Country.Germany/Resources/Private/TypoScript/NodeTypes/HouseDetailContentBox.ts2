@@ -1,0 +1,17 @@
+prototype(Country.Germany:HouseDetailContentBox) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/HouseDetailContentBox.html'
+
+    headline = ${q(node).property('headline')}
+    text = ${q(node).property('text')}
+    image = ${q(node).property('image')}
+    link = ${q(node).property('link')}
+    linkText = ${q(node).property('linkText')}
+    item1 = ${q(node).property('item1')}
+    item2 = ${q(node).property('item2')}
+    item3 = ${q(node).property('item3')}
+    item4 = ${q(node).property('item4')}
+    section = ${q(node).property('section')}
+
+
+
+}

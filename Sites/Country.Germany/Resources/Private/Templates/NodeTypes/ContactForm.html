@@ -1,0 +1,190 @@
+ <a href="#contactForm" class="contact-link hidden-xs" data-toggle="modal">
+           
+            <p>Kontakt &amp; <br>Katalog</p>
+        </a>
+
+        <!-- Modal -->
+        <div class="modal fade" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="contactFormLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title" id="contactFormLabel">Nehmen Sie mit uns Kontakt auf!</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="contact-home">
+                                    <li>Wolf Systembau Gesellschaft m.b.H., <br>
+                                        Fischerbühel 1, <br>
+                                        4644 Scharnstein
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="contact">
+                                    <li>+4376153000</li>
+                                    <li>Schreiben Sie uns eine E-Mail</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <form action="{f:uri.resource(path:'Form/sendDatatoCRM.php', package:'Country.Germany')}">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="title">Anrede</label>
+                                    <input type="text" class="form-control" id="title">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="firstname">Vorname*</label>
+                                    <input type="text" class="form-control" id="firstname" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastname">Nachname*</label>
+                                    <input type="text" class="form-control" id="lastname" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="road">Straße*</label>
+                                    <input type="text" class="form-control" id="road" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="plz">PLZ*</label>
+                                    <input type="text" class="form-control" id="plz" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="ort">Ort*</label>
+                                    <input type="text" class="form-control" id="ort" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="land">Land</label>
+                                    <select class="form-control">
+                                        <option>Österreich</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="telephone">Telefon*</label>
+                                    <input type="text" class="form-control" id="telephone" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="fax">Fax</label>
+                                    <input type="text" class="form-control" id="fax">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email">E-Mail*</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="interest">Ich interessiere mich für:</label>
+                                    <textarea class="form-control" rows="3" id="interest"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Bitte vereinbaren Sie einen Beratungstermin mit mir.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="">Wie haben Sie von unserer Website erfahren?</label>
+                                    <select class="form-control">
+                                        <option>Bitte auswählen...</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="">Ist ein Grundstück vorhanden?</label>
+                                    <select class="form-control">
+                                        <option>Bitte auswählen...</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="">Wann wollen Sie bauen?</label>
+                                    <select class="form-control">
+                                        <option>Bitte auswählen...</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Ja, schicken Sie mir Informationen über WOLF Haus.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Ja, ich möchte über Neues per Email informiert werden.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Bitte senden Sie mir eine Kopie dieser Anfrage.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="checkbox">
+                                        <label class="agreement">
+                                            <input type="checkbox"> Zustimmungserklärung: Der Internet-Nutzer ist damit einverstanden, dass die im Rahmen einer Internet-Nutzung erhobenen Daten zum Zwecke der Kommunikation zwischen ihm und der Wolf Systembau Gesellschaft m.b.H. verwendet und gespeichert werden dürfen. Diese Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden. *
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-custom">Absenden</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p><strong>* Pflichtfelder</strong></p>
+                    </div>
+                </div>
+            </div>
+        <!-- End Contact Form -->
+        </div>

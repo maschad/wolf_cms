@@ -1,0 +1,20 @@
+'Country.Germany:CustomCarousel':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  childNodes:
+    carouselItems:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Country.Germany:CustomCarouselItem': true  
+  ui:
+    label: 'Headerbild'
+    group: 'Sliders'
+    icon: 'icon-picture'
+    inlineEditable: true
+    inspector:
+      groups:
+        details:
+          label: Details
+

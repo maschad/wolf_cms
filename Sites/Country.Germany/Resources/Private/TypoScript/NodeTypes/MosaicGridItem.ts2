@@ -1,0 +1,23 @@
+prototype(Country.Germany:MosaicGridItem) < prototype(TYPO3.Neos:Content) 
+prototype(Country.Germany:MosaicGridItem){
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MosaicGridItem.html'
+
+    thumbnail = ${q(node).property('thumbnail')}
+    thumbnailHeading = ${q(node).property('thumbnailHeading')}
+    thumbnailSubHeading1 = ${q(node).property('thumbnailSubHeading1')}
+    thumbnailSubHeading2 = ${q(node).property('thumbnailSubHeading2')}
+    thumbnailAlternativeText = ${q(node).property('thumbnailAlternativeText')}
+
+    heading = ${q(node).property('heading')}
+    subheading = ${q(node).property('subheading')}
+    description = ${q(node).property('description')}
+    linkContent = ${q(node).property('linkContent')}
+
+    video = ${q(node).property('video')}
+    image = ${q(node).property('image')}
+    imageAlternativeText = ${q(node).property('imageAlternativeText')}
+
+    overlayColor = ${q(node).property('overlayColor')}
+    
+    mosaicType = ${q(node).property('mosaicType')}
+}

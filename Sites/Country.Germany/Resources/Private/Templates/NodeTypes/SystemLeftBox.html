@@ -1,0 +1,22 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+<div style="padding: 25px;"></div>
+<div {attributes -> f:format.raw()}>
+	<section class="section hidden-xs {hintergrund}" id="article">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-6">
+      				<img class="img-responsive center-block img-border-left {borderColor}" <f:if condition="{image}"> src="{f:uri.resource(resource: image.resource)}" </f:if>>
+  				</div>
+                <div class="col-sm-7 col-md-6">
+					<f:if condition="{linkText}">
+                		<f:then>
+							<a href="{link}" class="system link-default">{neos:contentElement.editable(property: 'linkText', tag: 'span')}</a>
+						</f:then>
+					</f:if>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div style="padding: 25px;"></div>

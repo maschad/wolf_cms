@@ -1,0 +1,9 @@
+Dear wine shop team
+
+just entered into a new application for the wine tasting in the {} form.formState.formValues.date:
+
+Name: {} form.formState.formValues.name
+Email {} form.formState.formValues.email
+Comment: {} form.formState.formValues.comment
+
+Best wishes

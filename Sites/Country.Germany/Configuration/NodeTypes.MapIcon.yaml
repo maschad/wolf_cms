@@ -1,0 +1,43 @@
+'Country.Germany:MapIcon':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: Karte-Ikon
+    icon: icon-picture
+    group: 'Partials'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        mapIcon:
+          label: 'Karte-Ikon'
+  properties:
+    name:
+      type: string
+      ui:
+        label: 'Name'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Karte-Ikon Name'
+        inspector:
+          group: 'mapIcon'
+    title:
+      type: string
+      defaultValue: Schall gedämmt
+      ui:
+        label: 'Popover Titel'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Titel'
+        inspector:
+          group: 'mapIcon'
+    description:
+      type: string
+      defaultValue: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor.'
+      ui:
+        label: 'Popover Beschreibung'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Beschreibung'  
+        inspector:
+          group: 'mapIcon'     
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'

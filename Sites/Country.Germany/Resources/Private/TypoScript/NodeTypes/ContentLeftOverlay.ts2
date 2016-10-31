@@ -1,0 +1,11 @@
+prototype(Country.Germany:ContentLeftOverlay) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/ContentLeftOverlay.html'
+
+    headline = ${q(node).property('headline')}
+    text = ${q(node).property('text')}
+    image = ${q(node).property('image')}
+    link = ${q(node).property('link')}
+    linkText = ${q(node).property('linkText')}
+    arrows = ${q(node).property('arrows')}
+
+}

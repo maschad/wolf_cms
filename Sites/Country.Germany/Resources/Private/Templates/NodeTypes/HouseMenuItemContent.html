@@ -1,0 +1,61 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<f:section name="Image">
+    <f:if condition="{image}">
+        <f:then>
+            <img class="system img-responsive" src="{f:uri.resource(resource: image.resource)}" alt="{alt}">
+        </f:then>
+    </f:if>    
+</f:section>
+
+
+
+<f:render section="Image" arguments="{image:node.properties.image, alt:node.properties.title}" /> 
+<p class="system dropdown-header">{title}</p>
+<p class="system text-default">{description} </p>
+<ul>
+    <f:if condition="{listItem1}">
+        <f:then>
+            <li><p>{listItem1} </p></li>
+        </f:then>
+    </f:if>
+    <f:if condition="{listItem2}">
+        <f:then>
+            <li><p>{listItem2} </p></li>
+        </f:then>
+    </f:if>
+    <f:if condition="{listItem3}">
+        <f:then>
+            <li><p>{listItem3} </p></li>
+        </f:then>
+    </f:if>
+</ul>
+
+<ul class="system links-list">
+    <f:if condition="{link1}">
+        <f:then>
+            <li><a href="{link1}">{linkText1}</a></li>
+        </f:then>
+    </f:if>
+    <f:if condition="{link2}">
+        <f:then>
+            <li><a href="{link2}">{linkText2}</a></li>
+        </f:then>
+    </f:if>
+    <f:if condition="{link3}">
+        <f:then>
+            <li><a href="{link3}">{linkText3}</a></li>
+        </f:then>
+    </f:if>
+    <f:if condition="{link4}">
+        <f:then>
+            <li><a href="{link4}">{linkText4}</a></li>
+        </f:then>
+    </f:if>
+    <f:if condition="{link5}">
+        <f:then>
+            <li><a href="{link5}">{linkText5}</a></li>
+        </f:then>
+    </f:if>
+    
+</ul>

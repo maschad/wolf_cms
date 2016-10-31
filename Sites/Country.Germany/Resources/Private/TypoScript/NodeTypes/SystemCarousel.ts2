@@ -1,0 +1,14 @@
+prototype(Country.Germany:SystemCarousel){
+    carouselItems = TYPO3.Neos:ContentCollection {
+                nodePath = 'carouselItems'
+                content.iterationName = 'carouselItemsIteration'
+                attributes.class = 'carousel-inner'
+		 headline = ${q(node).property('headline')}
+		 text= ${q(node).property('text')} 
+
+        }
+
+        // Collect the carousels children but only images
+        carouselItemArray = ${q(node).children('carouselItems').children('[instanceof TYPO3.Neos.NodeTypes:Image]')}
+
+}

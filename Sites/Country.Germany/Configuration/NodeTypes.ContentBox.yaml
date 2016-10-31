@@ -1,0 +1,49 @@
+'Country.Germany:ContentBox':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Content-Boxen'
+    group: 'Content'
+    icon: icon-check-empty
+    inspector:
+      groups:
+        Box Text:
+          label: Box Text
+  properties:
+    headline:
+      type: string
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: ''
+        inspector:
+          group: 'Box Text'
+    text:
+      type: string
+      ui:
+        label: 'Text'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: ''
+        inspector:
+          group: 'Box Text'
+    linkText:
+      type: string
+      ui:
+        label: 'Link Text'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie mit dem Inhalt'
+        inspector:
+          group: 'Box Text'
+    link:
+      type: string
+      ui:
+        label: 'Link URL'
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: ''
+        inspector:
+          group: 'Box Text'
+    

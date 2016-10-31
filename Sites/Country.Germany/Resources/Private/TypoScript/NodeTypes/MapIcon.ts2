@@ -1,0 +1,17 @@
+prototype(Country.Germany:MapIcon) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/MapIcon.html'
+
+    node=${node}
+
+   
+
+    name = ${q(node).property('name')}
+    title = ${q(node).property('title')}
+    description = ${q(node).property('description')}
+   
+   
+   
+
+    
+}
+

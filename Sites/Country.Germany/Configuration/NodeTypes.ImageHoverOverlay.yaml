@@ -1,0 +1,94 @@
+'Country.Germany:ImageHoverOverlay':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Kachel'
+    icon: icon-picture
+    group: 'Partials'
+    inspector:
+      groups:
+        information:
+          label: Information
+        display:
+          label: Display
+  properties:  
+    title:
+      type: string
+      ui:
+        label: 'Titel'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Overlay Title'
+        inspector:
+          group: information
+    description:
+      type: string
+      ui:
+        label: 'Beschreibung'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Text'  
+        inspector:
+          group: information     
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+    linkText:
+      type: string
+      ui:
+        label: 'Link Text'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Text'  
+        inspector:
+          group: information
+    link:
+      type: string
+      ui:
+        label: 'Link URL'
+        aloha:
+          placeholder: 'URL'  
+        inspector:
+          group: information      
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: Image
+        reloadIfChanged:  true 
+        inspector:
+          group: display
+    fitType:
+      type: string
+      defaultValue: 'fitSmall'
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Fit Type'
+        inspector:
+          group: display
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'fitSmall':
+                label: 'Fit Small'
+              'fitLarge':
+                label: 'Fit Large'
+    overlayColor:
+      type: string
+      ui:
+        label: 'Farbauswahl'
+        inlineEditable: false
+        inspector:
+          group: display
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              dunkelgrau:
+                label: Dunkelgrau
+              gelb:
+                label: Gelb
+              rot:
+                label: Rot
+              grun:
+                label: Grün
+              blau:
+                label: Blau
+              dunkelrot:
+                label: Dunkelrot

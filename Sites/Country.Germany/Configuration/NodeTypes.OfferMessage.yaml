@@ -1,0 +1,64 @@
+'Country.Germany:OfferMessage':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: Kachel mit Text
+    icon: icon-file-text
+    group: 'Partials'
+    inspector:
+      groups:
+        offermessage:
+          label: Mosaik Text
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Titel'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Nachricht Titel'
+        inspector:
+          group: offermessage
+    description:
+      type: string
+      ui:
+        label: 'Nachricht description'
+        inlineEditable: true
+        aloha:
+          placeholder: 'description' 
+        inspector:
+          group: offermessage
+    link:
+      type: string
+      ui:
+        label: 'Nachricht URL'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Link URL'  
+        inspector:
+          group: offermessage
+    linkText:
+      type: string
+      ui:
+        label: 'Nachricht Link Text'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Link Text'  
+        inspector:
+          group: offermessage          
+    backgroundColor:
+      type: string
+      defaultValue: 'mosaic-text-gray'
+      ui:
+        label: 'Background Color'
+        reloadIfChanged: TRUE
+        inspector:
+          group: offermessage
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'mosaic-text-gray':
+                label: 'Gray'
+              'mosaic-text-white':
+                label: 'White'
+                

@@ -1,0 +1,49 @@
+prototype(Country.Germany:Map) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/Map.html'
+
+    node=${node}
+
+    iconTopLeft = TYPO3.Neos:ContentCollection {
+       nodePath= 'iconTopLeft'
+    }
+
+    iconTopRight = TYPO3.Neos:ContentCollection {
+       nodePath= 'iconTopRight'
+    }
+
+    iconMidRight = TYPO3.Neos:ContentCollection {
+       nodePath= 'iconMidRight'
+    }
+
+    iconMidCenterRight = TYPO3.Neos:ContentCollection {
+       nodePath= 'iconMidCenterRight'
+    }
+
+    iconBottom = TYPO3.Neos:ContentCollection {
+       nodePath= 'iconBottom'
+    }
+
+    iconMidLeft = TYPO3.Neos:ContentCollection {
+       nodePath= 'iconMidLeft'
+    }
+
+    iconMidCenterLeft = TYPO3.Neos:ContentCollection {
+       nodePath= 'iconMidCenterLeft'
+    }
+
+    icon1Name = ${q(node).children('iconTopLeft').children('[instanceof Country.Germany:MapIcon]').first().property('name')}
+    icon2Name = ${q(node).children('iconTopRight').children('[instanceof Country.Germany:MapIcon]').first().property('name')}
+    icon3Name = ${q(node).children('iconMidRight').children('[instanceof Country.Germany:MapIcon]').first().property('name')}
+    icon4Name = ${q(node).children('iconMidCenterRight').children('[instanceof Country.Germany:MapIcon]').first().property('name')}
+    icon5Name = ${q(node).children('iconBottom').children('[instanceof Country.Germany:MapIcon]').first().property('name')}
+    icon6Name = ${q(node).children('iconMidLeft').children('[instanceof Country.Germany:MapIcon]').first().property('name')}
+    icon7Name = ${q(node).children('iconMidCenterLeft').children('[instanceof Country.Germany:MapIcon]').first().property('name')}
+
+    name = ${q(node).property('name')}
+    image = ${q(node).property('image')}
+   
+   
+
+    
+}
+

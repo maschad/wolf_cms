@@ -1,0 +1,51 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
+    <f:for each="{items}" as="item" iteration="mainIterator">
+        <li class="{f:if(condition: item.subItems, then: 'dropdown dropdown-accordion', else: '')}">
+           <neos:link.node node="{item.node}" />
+           <ul class="dropdown-menu main-menu" role="menu">
+                <li>
+                    <div class="panel-group" id="accordion{mainIterator.index}" role="tablist" aria-multiselectable="true">
+                    	<f:if condition="{item.subItems}">
+							<f:render section="subList" arguments="{parent: mainIterator.index, items: item.subItems}" />
+						</f:if>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </f:for>
+
+
+<f:section name="subList">
+	
+		<f:for each="{items}" as="item" iteration="subIterator">
+			<div class="panel panel-default">
+                <div class="panel-heading collapsed" role="tab" id="heading{subIterator.index}" data-toggle="collapse" data-parent="#accordion{parent}" data-target="#collapse{subIterator.index}" aria-expanded="false" aria-controls="collapse{subIterator.index}">
+                    <h4 class="panel-title">
+						<neos:link.node node="{item.node}">{item.label}</neos:link.node>
+						<span class="indicator glyphicon glyphicon-menu-down pull-right" aria-hidden="true"></span>
+					</h4>
+				</div>
+				<f:if condition="{item.subItems}">
+					<div id="collapse{subIterator.index}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{subIterator.index}">
+                    	<div class="panel-body">
+                    		<f:render section="subList2" arguments="{items: item.subItems}" />
+                    		
+                    	</div>
+                	</div>
+                </f:if>
+			</div>
+			
+		</f:for>
+	
+</f:section>
+
+<f:section name="subList2">
+	<f:for each="{items}" as="item">
+			
+			<neos:link.node class="list-group-item" node="{item.node}">{item.label}</neos:link.node>
+
+			
+	</f:for>
+	
+</f:section>

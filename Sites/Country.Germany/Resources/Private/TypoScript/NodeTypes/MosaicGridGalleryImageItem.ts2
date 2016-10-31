@@ -1,0 +1,8 @@
+prototype(Country.Germany:MosaicGridGalleryImageItem) < prototype(TYPO3.Neos:Content)
+prototype(Country.Germany:MosaicGridGalleryImageItem) {
+
+	image = ${q(node).property('image')}
+	alternativeText = ${q(node).property('alternativeText')}
+	imageSize = ${q(node).property('imageSize')}
+
+}

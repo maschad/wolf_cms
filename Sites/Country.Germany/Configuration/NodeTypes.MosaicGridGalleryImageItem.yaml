@@ -1,0 +1,43 @@
+'Country.Germany:MosaicGridGalleryImageItem':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: 'Mosaic Grid Gallery Image'
+    icon: 'icon-picture'
+    group: 'Partials'
+    inspector:
+      groups:
+        display:
+          label: 'Display'
+
+  properties:
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Bild'
+        reloadIfChanged: true
+        inspector:
+          group: display
+    alternativeText:
+      type: string
+      ui: 
+        label: 'Alternative Text'
+        reloadIfChanged: true
+        inlineEditable: false
+        inspector:
+          group: display
+    imageSize:
+      type: string
+      defaultValue: 'img-responsive'
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Image Size'
+        inspector:
+          group: display
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'img-responsive':
+                label: 'Small'
+              'img-fit-large':
+                label: 'Large'

@@ -1,0 +1,21 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+	<div class="content-body" id="references-body">
+		<!--<div class="container">-->
+			<div class="references-content">
+			    <!--<div class="row">
+			        <div class="col-md-6">-->
+			            <label for="">{neos:contentElement.editable(property: 'label')}</label>
+			            <select class="form-control turnintodropdown" id="{filterName}">
+			                <option>{neos:contentElement.editable(property: 'option1', tag: 'span')}</option>
+			                <option>{neos:contentElement.editable(property: 'option2', tag: 'span')}</option>
+			                <option>{neos:contentElement.editable(property: 'option3', tag: 'span')}</option>
+			                <option>{neos:contentElement.editable(property: 'option4', tag: 'span')}</option>
+			           </select>
+			        </div>
+			    <!-- </div> -->
+			<!-- </div> -->
+		<!-- </div> -->
+	</div>
+</div>

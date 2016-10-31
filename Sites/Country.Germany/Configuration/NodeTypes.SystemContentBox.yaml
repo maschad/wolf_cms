@@ -1,0 +1,62 @@
+'Country.Germany:SystemContentBox':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: 'Bild mit Contentboxen System'
+    group: 'Content'
+    icon: icon-image
+    inspector:
+      groups:
+        image:
+          label: 'Image'
+          icon: icon-image
+          position: 1
+        Box Text:
+          label: Box Text
+  properties:
+    headline:
+      type: string
+      ui:
+        label: 'Überschrift'
+        inlineEditable: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie durch Ihre Schlagzeile Wert ...'
+        inspector:
+          group: 'Box Text'
+    text:
+      type: string
+      defaultValue: 'Ersetzen Sie durch Ihre Inhalte'
+      ui:
+        label: 'Text'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie durch Ihre Inhalte'
+        inspector:
+          group: 'Box Text'
+    link:
+      type: string
+      ui:
+        label: 'Link URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'Box Text' 
+    linkText:
+      type: string
+      ui:
+        label: 'Link Text'
+        inlineEditable: TRUE
+        reloadIfChanged: TRUE
+        aloha:
+          placeholder: 'Ersetzen Sie mit Link Text'
+        inspector:
+          group: 'Box Text'     
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'image'
+
+      

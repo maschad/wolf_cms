@@ -1,0 +1,87 @@
+TYPO3:
+  Form:
+    yamlPersistenceManager:
+      savePath: 'resource://Country.Germany/Private/Form/'
+    presets:
+      myCustom:
+        title: 'Custom Elements'
+        parentPreset: 'default'
+        formElementTypes:
+          'TYPO3.Form:Form':
+            renderingOptions:
+              templatePathPattern: 'resource://Country.Germany/Private/CustomElements/Form.html'
+          'TYPO3.Form:Section':
+            renderingOptions:
+              templatePathPattern: 'resource://Country.Germany/Private/CustomElements/Section.html'
+          'TYPO3.Form:SingleLineText':
+            renderingOptions:
+              templatePathPattern: 'resource://Country.Germany/Private/CustomElements/SingleLineText.html'
+          'TYPO3.Form:SingleSelectDropdown':
+            renderingOptions:
+              templatePathPattern: 'resource://Country.Germany/Private/CustomElements/SingleSelectDropdown.html'
+          'TYPO3.Form:Checkbox':
+            renderingOptions:
+              templatePathPattern: 'resource://Country.Germany/Private/CustomElements/Checkbox.html'
+          'TYPO3.Form:MultiLineText':
+            renderingOptions:
+              templatePathPattern: 'resource://Country.Germany/Private/CustomElements/MultiLineText.html'
+          'TYPO3.Form:Base':
+            renderingOptions:
+              layoutPathPattern: 'resource://Country.Germany/Private/CustomElements/Layouts/{@type}.html'
+  TYPO3CR:
+    contentDimensions:
+      'language':
+        label: 'Language'
+        icon: 'icon-language'
+        default: 'en'
+        defaultPreset: 'en'
+        presets:
+          'en':
+            label: 'EN'
+            values: ['en']
+            uriSegment: 'english'
+          'fr':
+            label: 'FR'
+            values: ['fr', 'en']
+            uriSegment: 'francais'
+          'de':
+            label: 'DE'
+            values: ['de', 'en']
+            uriSegment: 'deutsch'
+      'country':
+        label: 'Country'
+        icon: 'icon-globe'
+        default: 'de'
+        defaultPreset: 'de'
+        presets:
+          'de':
+            label: 'Deutschland'
+            values: ['de']
+            uriSegment: 'de'
+          'os':
+            label: 'Österreich'
+            values: ['os']
+            uriSegment: 'os'
+  Neos:
+    typoScript:
+      autoInclude:
+        'SimplyAdmire.Neos.Video': TRUE
+    nodeTypes:
+      groups:
+        Videos:
+          position: 400
+          label: 'Videos'
+        Sliders:
+          position: 300
+          label: 'Carousel-sliders'
+        Menu:
+          position: 200
+          label: 'Menu'
+        Content:
+          position: 100
+          label: 'Content'
+        Partials:
+          position: 500
+          label: 'Partials'
+
+

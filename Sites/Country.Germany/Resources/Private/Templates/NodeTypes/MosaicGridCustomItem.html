@@ -1,0 +1,53 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<!-- gallery items -->
+	<!-- thumbnail -->
+	<div class="gallery-contents">
+        <div class="gallery-overlay {overlayColor}">
+            <p class="gallery-overlay-heading">{thumbnailHeading}</p>
+            <p>{thumbnailSubHeading1} <br> {thumbnailSubHeading2}</p>
+        </div>
+        <div class="thumbnail gallery-trigger">
+            <img src="{f:uri.resource(resource: thumbnail.resource)}" alt="{thumbnailAlternativeText}" class="teaser-image" />
+        </div>
+    </div>
+    <div class="gallery-expander container {overlayColor}">
+        <div class="gallery-expander-contents">
+            <div class="gallery-trigger-close close"><img src="{f:uri.resource(path:'Images/close_icon.png', package:'Country.Germany')}" alt="close details icon"></div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="image">
+
+                        <f:if condition="mosaicType == 'video'">
+                            <f:then>
+                                <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/6Htyn87a3w4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                            </f:then>
+                        </f:if>
+
+                        <f:if condition="mosaicType == 'image'">
+                            <f:then>
+                                <img class="img-responsive" src="{f:uri.resource(path:'Images/star_site_5.png', package:'Country.Germany')}" alt="main image">
+                            </f:then>
+                        </f:if>                        
+
+                        <f:if condition="mosaicType == 'gallery'">
+                            <f:then>
+                                <div>Gallery Item</div>
+                                
+                                <div id="fotorama_gallery_reference" class="fotorama" data-nav="thumbs" data-arrows="false" data-swipe="false" data-thumbwidth="90px" data-thumbheight="70px" data-thumbborderwidth="0" data-thumbmargin="15">
+                                
+                                </div>
+                            </f:then>
+                        </f:if>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <p class="grid-content-heading">{heading}</p>
+                    <p class="grid-content-sub-heading">{subheading}</p>
+                    <p>{description}</p>
+                    <p class="grid-content-link"><a href="#" class="link-default">{linkContent}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>

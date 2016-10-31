@@ -1,0 +1,159 @@
+'Country.Germany:HouseTypeMenuItem':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: Produkt Artikel
+    icon: icon-list
+    group: 'Partials'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        houseTypeMenuItem:
+          label: Produkt Artikel
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Titel'
+        aloha:
+          placeholder: 'Titel'
+        inspector:
+          group: houseTypeMenuItem
+    description1:
+      type: string
+      ui:
+        label: 'Beschreibung 1'
+        aloha:
+          placeholder: 'Beschreibung 1'
+        inspector:
+          group: houseTypeMenuItem
+    description2:
+      type: string
+      ui:
+        label: 'Beschreibung 2'
+        aloha:
+          placeholder: 'Beschreibung 2'
+        inspector:
+          group: houseTypeMenuItem 
+    description3:
+      type: string
+      ui:
+        label: 'Beschreibung 3'
+        aloha:
+          placeholder: 'Beschreibung 3'    
+        inspector:
+          group: houseTypeMenuItem 
+    buttonText:
+      type: string
+      ui:
+        label: 'Button Text'
+        aloha:
+          placeholder: 'Button Text'    
+        inspector:
+          group: houseTypeMenuItem   
+    link:
+      type: string
+      ui:
+        label: 'Link URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseTypeMenuItem'   
+    link2:
+      type: string
+      ui:
+        label: 'Link 2 URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseTypeMenuItem'
+    link2Text:
+      type: string
+      ui:
+        label: 'Link 2 Text'
+        aloha:
+          placeholder: 'link Text'    
+        inspector:
+          group: houseTypeMenuItem 
+    link3:
+      type: string
+      ui:
+        label: 'Link 3  URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseTypeMenuItem'
+    link3Text:
+      type: string
+      ui:
+        label: 'Link 3 Text'
+        aloha:
+          placeholder: 'link Text'    
+        inspector:
+          group: houseTypeMenuItem
+    link4:
+      type: string
+      ui:
+        label: 'Link 4 URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseTypeMenuItem'
+    link4Text:
+      type: string
+      ui:
+        label: 'Link 4 Text'
+        aloha:
+          placeholder: 'link Text'    
+        inspector:
+          group: houseTypeMenuItem 
+    link5:
+      type: string
+      ui:
+        label: 'Link 5 URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseTypeMenuItem'
+    link5Text:
+      type: string
+      ui:
+        label: 'Link 5 Text'
+        aloha:
+          placeholder: 'link Text'    
+        inspector:
+          group: houseTypeMenuItem 
+    link6:
+      type: string
+      ui:
+        label: 'Link 6 URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseTypeMenuItem'
+    link6Text:
+      type: string
+      ui:
+        label: 'Link 6 Text'
+        aloha:
+          placeholder: 'link Text'    
+        inspector:
+          group: houseTypeMenuItem
+    link7:
+      type: string
+      ui:
+        label: 'Link 7 URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'houseTypeMenuItem'
+    link7Text:
+      type: string
+      ui:
+        label: 'Link 7 Text'
+        aloha:
+          placeholder: 'link  Text'    
+        inspector:
+          group: houseTypeMenuItem         
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: Image
+        reloadIfChanged:  true 
+        inspector:
+          group: houseTypeMenuItem
+          
+

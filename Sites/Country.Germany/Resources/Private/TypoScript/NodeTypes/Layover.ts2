@@ -1,0 +1,7 @@
+prototype(Country.Germany:Layover) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/Layover.html'
+
+    headline = ${q(node).property('headline')}
+    text = ${q(node).property('text')}
+    image = ${q(node).property('image')}
+}

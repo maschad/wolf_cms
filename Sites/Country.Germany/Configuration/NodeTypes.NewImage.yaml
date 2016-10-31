@@ -1,0 +1,34 @@
+'Country.Germany:NewImage':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: 'Responsive Image'
+    icon: 'icon-picture'
+    inspector:
+      groups:
+        responsiveImage:
+          label: Responsive Image
+  properties:
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'responsiveImage'
+    fitType:
+      type: string
+      defaultValue: 'fitSmall'
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Fit Type'
+        inspector:
+          group: responsiveImage
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'fitSmall':
+                label: 'Fit Small'
+              'fitLarge':
+                label: 'Fit Large'
+              

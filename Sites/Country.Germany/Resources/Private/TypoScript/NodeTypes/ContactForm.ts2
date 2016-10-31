@@ -1,0 +1,10 @@
+prototype(Country.Germany:ContactForm) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/ContactForm.html'
+
+    node=${node}
+
+   
+
+    
+}
+

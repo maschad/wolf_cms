@@ -1,0 +1,68 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+
+
+<f:if condition="{arrows}">
+    <div id="feature-before"></div>
+
+    <div class="container">
+        <a href="#feature-before" class="arrow-down-link"></a>
+    </div>
+</f:if>
+
+<section class="{f:if(condition: blueBackground, then: 'feature-blue', else: 'feature-original')} section" id="feature">
+    <div class="{f:if(condition: arrows, then: 'feature-content', else: '')}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <neos:contentElement.editable property="title" tag="p" class="feature-heading" />
+                    <neos:contentElement.editable property="description" tag="p"/>
+                    
+                </div>
+                <div class="col-md-9">
+                    <!-- <img src="assets/img/house_collection.png" class="img-responsive"> -->
+                    <ul class="feature-grid">
+                        <li>
+                            <ts:render path="row1col1"/>
+                        </li>
+
+                        <li>
+                            <ts:render path="row1col2"/>
+                        </li>
+
+                        <li>
+                            <ts:render path="row1col3"/>
+                        </li>
+
+                        <li>
+                            <ts:render path="row2col1"/>
+                        </li>
+
+                        <li>
+                            <ts:render path="row2col2"/>
+                        </li>
+
+                        <li>
+                            <ts:render path="row2col3"/>
+                        </li>               
+
+                        <li>
+                            <ts:render path="row3col1"/>
+                        </li>
+
+                        <li>
+                            <ts:render path="row3col2"/>
+                        </li>
+
+                        <li>
+                            <ts:render path="row3col3"/>
+                        </li>
+                        
+                        
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

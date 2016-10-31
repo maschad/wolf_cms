@@ -1,0 +1,6 @@
+prototype(Country.Germany:CommentBox) < prototype(TYPO3.Neos:Content) {
+    templatePath = 'resource://Country.Germany/Private/Templates/NodeTypes/CommentBox.html'
+
+    headline = ${q(node).property('headline')}
+    text = ${q(node).property('text')}
+}

@@ -1,0 +1,109 @@
+/**
+ * Root TypoScript template for the Country.Germany site
+ */
+prototype(TYPO3.Neos:DimensionsMenu) < prototype(TYPO3.TypoScript:Template)
+page = Page {
+	
+	head {
+		stylesheets.site = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Country.Germany/Private/Templates/Page/Default.html'
+			sectionName = 'stylesheets'
+		}
+
+		javascripts.site = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Country.Germany/Private/Templates/Page/Default.html'
+			sectionName = 'headScripts'
+		}
+
+		meta = TYPO3.TypoScript:Template {
+                templatePath = 'resource://Country.Germany/Private/Templates/Page/Default.html'
+                sectionName = 'meta'
+
+                
+        }
+	}
+
+	body {
+		templatePath = 'resource://Country.Germany/Private/Templates/Page/Default.html'
+		sectionName = 'body'
+		parts {
+			mainMenu = Menu
+			mainMenu {
+    				templatePath = 'resource://Country.Germany/Private/Templates/Page/MainMenu.html'
+    				entryLevel = 1
+    				maximumLevels = 3
+			}
+
+			mobileMainMenu = Menu
+			mobileMainMenu {
+    				templatePath = 'resource://Country.Germany/Private/Templates/Page/MobileMainMenu.html'
+    				entryLevel = 1
+    				maximumLevels = 3
+			}
+
+			languageMenu = TYPO3.Neos:DimensionMenu {
+                		dimension = 'language'
+				templatePath = 'resource://Country.Germany/Private/Templates/Page/LanguageMenu.html'
+           	 	}
+
+			mobileLanguageMenu = TYPO3.Neos:DimensionMenu {
+                		dimension = 'language'
+				templatePath = 'resource://Country.Germany/Private/Templates/Page/MobileLanguageMenu.html'
+           	 	}
+			
+			
+
+            		countryMenu = TYPO3.Neos:DimensionMenu {
+                		dimension = 'country'
+				templatePath = 'resource://Country.Germany/Private/Templates/Page/CountryMenu.html'
+            		}
+
+			mobileCountryMenu = TYPO3.Neos:DimensionMenu {
+                		dimension = 'country'
+				templatePath = 'resource://Country.Germany/Private/Templates/Page/MobileCountryMenu.html'
+            		}
+			
+			breadcrumb = BreadcrumbMenu
+		}
+		// These are your content areas, you can define as many as you want, just name them and the nodePath.
+		content {
+			// The default content section
+			header = ContentCollection {
+				nodePath = 'header'
+				collection = ${q(site).children('header').children()}
+			}
+			main = ContentCollection {
+				nodePath = 'main'
+			}
+
+			footer = ContentCollection {
+				nodePath = ${q(site).children('footer').property('_path')}
+				collection = ${q(site).children('footer').children()}
+			}
+		}
+
+		javascripts.site = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Country.Germany/Private/Templates/Page/Default.html'
+			sectionName = 'bodyScripts'
+		}
+	}
+
+	
+
+	prototype(TYPO3.Neos.NodeTypes:Form) {
+		presetName = 'myCustom'
+	}
+	
+}
+
+include: NodeTypes/*.ts2
+include: resource://JohannesSteu.Bootstrap.GridSystem/Private/TypoScript/Root.ts2
+
+json = TYPO3.TypoScript:Http.Message {
+    httpResponseHead {
+        headers.Content-Type = 'application/json'
+    }
+    content = TYPO3.TypoScript.value {
+        value = 'Testing value just to check the output'
+    }
+}

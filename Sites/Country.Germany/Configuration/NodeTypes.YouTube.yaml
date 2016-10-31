@@ -1,0 +1,18 @@
+'Country.Germany:YouTube':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    group: 'Videos'
+    icon: 'icon-code'
+    label: 'Eingebettet Links'
+    inspector:
+      groups:
+        video:
+          label: 'Eingebettet Link'
+  properties:
+    videoUrl:
+      type: string
+      ui:
+        label: 'Link URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'video'

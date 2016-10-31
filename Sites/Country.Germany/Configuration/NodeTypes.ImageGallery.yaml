@@ -1,0 +1,29 @@
+'Country.Germany:ImageGallery':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  childNodes:
+    carouselItems:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': FALSE
+          'TYPO3.Neos.NodeTypes:Image': TRUE
+  properties:
+    headline:
+      type: string
+      ui:
+        label: 'Headline'
+        inlineEditable: true
+        aloha:
+          placeholder: 'Ersetzen Sie durch Ihre Schlagzeile Wert ...'
+        inspector:
+          group: Box Text
+  ui:
+    label: 'Bildergalerie'
+    group: 'Sliders'
+    icon: 'icon-picture'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        Box Text:
+          label: Box Text

@@ -1,0 +1,10 @@
+prototype(Country.Germany:Breadcrumb) < prototype(TYPO3.Neos:BreadcrumbMenu) {
+	templatePath = 'resource://Country.Germany/Private/Templates/TypoScriptObjects/BreadcrumbMenu.html'
+	itemCollection = ${q(node).parents('[instanceof TYPO3.Neos:Document]').get()}
+
+
+    attributes.class = 'breadcrumb'
+      
+
+
+}

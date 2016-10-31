@@ -1,0 +1,45 @@
+'Country.Germany:Video':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+    'TYPO3.Neos.NodeTypes:ImageMixin': TRUE
+    'TYPO3.Neos.NodeTypes:LinkMixin': TRUE
+  ui:
+    label: 'Video'
+    icon: 'icon-youtube-play'
+    group: 'Videos'
+    inspector:
+      groups:
+        video:
+          label: 'Video-Einstellungen'
+          position: 10
+        image:
+          position: 20
+  properties:
+    link:
+      ui:
+        label: 'Video URL'
+        inspector:
+          group: 'video'
+    width:
+      type: 'integer'
+      defaultValue: 0
+      ui:
+        label: 'Breite'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'video'
+    height:
+      type: 'integer'
+      defaultValue: 0
+      ui:
+        label: 'Höhe'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'video'
+    videos:
+      type: array<TYPO3\Media\Domain\Model\Asset>
+      ui:
+        inspector:
+          group: 'video'
+        label: 'Videos'
+        reloadIfChanged: TRUE

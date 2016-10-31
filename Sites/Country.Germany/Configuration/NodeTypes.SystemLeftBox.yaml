@@ -1,0 +1,60 @@
+'Country.Germany:SystemLeftBox':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: 'Content Mit Spalten Links'
+    group: 'Content'
+    icon: icon-image
+    inspector:
+      groups:
+        image:
+          label: 'Image'
+          icon: icon-image
+          position: 1
+        Box Text:
+          label: Box Text
+  properties:
+    link:
+      type: string
+      ui:
+        label: 'Link URL'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'Box Text' 
+    linkText:
+      type: string
+      ui:
+        label: 'Link Text'
+        inlineEditable: TRUE
+        reloadIfChanged: True
+        inspector:
+          group: 'Box Text'   
+    image:
+      type: TYPO3\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Image'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'image'
+    borderColor:
+      type: string
+      ui:
+        label: 'Border Color'
+        inlineEditable: false
+        inspector:
+          group: 'image'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              dunkelgrau:
+                label: Dunkelgrau
+              gelb:
+                label: Gelb
+              rot:
+                label: Rot
+              grun:
+                label: Grün
+              blau:
+                label: Blau
+              dunkelrot:
+                label: Dunkelrot
